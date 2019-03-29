@@ -1,3 +1,13 @@
 import React from 'react'
+import styled from 'styled-components'
 
-export default () => <div>Webova stranka TMKE</div>
+const Wrapper = styled.div`
+  height: 100vh;
+  background: violet;
+`
+
+export default () => (
+  <Wrapper>
+    <div>Webova stranka TMKE</div>
+  </Wrapper>
+)
