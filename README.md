@@ -15,6 +15,17 @@ Obsah je poskytovaný v súlade s licenciou [CC BY-NC-SA 4.0][cc-by-nc-sa]. V sk
 [cc-by-nc-sa-icon]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
 [cc-by-nc-sa]: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
+## Development
+
+For development create new branches with features and merge them into `development` branch. 
+
+## Deployment
+
+Github pages automatically display static content from `master` branch. If you want to deploy static pages, in `development` branch run command:
+```
+npm run deploy
+```
+New static pages will be automatically built into `public` folder and deployed to `master` branch. In few seconds, you will be able to see changed pages on [https://toastmasters-kosice.github.io/](https://toastmasters-kosice.github.io/)
 
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
