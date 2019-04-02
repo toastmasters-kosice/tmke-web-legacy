@@ -15,6 +15,9 @@ Obsah je poskytovaný v súlade s licenciou [CC BY-NC-SA 4.0][cc-by-nc-sa]. V sk
 [cc-by-nc-sa-icon]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
 [cc-by-nc-sa]: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
+
+Landing image by [Scott Warman](https://unsplash.com/@scottiewarman?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge)
+
 ## Development
 
 For development create new branches with features and merge them into `development` branch. 
