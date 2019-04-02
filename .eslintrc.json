@@ -32,7 +32,8 @@
         "react/no-array-index-key": 0,
         "no-restricted-globals": 0,
         "react/no-did-mount-set-state": 0,
-        "radix": ["error", "as-needed"]
+        "radix": ["error", "as-needed"],
+        "implicit-arrow-linebreak": ["off"]
     },
     "globals": {
         "window": true,

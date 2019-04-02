@@ -1,13 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
+import NavBar from '../components/NavBar'
+import { Text } from '../components/Typography'
 
 const Wrapper = styled.div`
   height: 100vh;
-  background: violet;
 `
 
 export default () => (
   <Wrapper>
-    <div>Webova stranka TMKE</div>
+    <NavBar />
+    <div style={{ paddingTop: 60 }}>
+      <Text.M>
+        Stranka TM KE
+      </Text.M>
+    </div>
   </Wrapper>
 )
