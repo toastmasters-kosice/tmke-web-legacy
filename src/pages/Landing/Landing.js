@@ -2,10 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import NavBar from '../../components/NavBar'
-import { H1 } from '../../components/Typography'
+import { H1, Text } from '../../components/Typography'
 import Hero from '../../components/Hero'
 import theme from '../../theme'
 import { SECTION_ID, routes } from '../../constants'
+import Education from './Education'
+import Section from '../../components/Section'
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -27,18 +29,25 @@ const Landing = ({ data }) => (
         Tvorime recnikov a lidrov
       </StyledH1>
     </Hero>
-    <div id={SECTION_ID.EDUCATION}>
-      <H1>{SECTION_ID.EDUCATION}</H1>
-    </div>
-    <div id={SECTION_ID.ABOUT}>
-      <H1>{SECTION_ID.ABOUT}</H1>
-    </div>
-    <div id={SECTION_ID.MEETINGS}>
-      <H1>{SECTION_ID.MEETINGS}</H1>
-    </div>
-    <div id={SECTION_ID.CONTACT}>
-      <H1>{SECTION_ID.CONTACT}</H1>
-    </div>
+    <Education id={SECTION_ID.EDUCATION} />
+    <Section id={SECTION_ID.ABOUT} title={SECTION_ID.ABOUT} hasDarkBackground>
+      <Text.S>
+        aljdflka fdlaj lasjf adflja;l jfa;sldjf asdljfa;lsf;alsd jfasldjf ljdf
+        ;lajoerfiahga;fnc,vnbkaljfdghanv
+      </Text.S>
+    </Section>
+    <Section id={SECTION_ID.MEETINGS} title={SECTION_ID.MEETINGS}>
+      <Text.S>
+        aljdflka fdlaj lasjf adflja;l jfa;sldjf asdljfa;lsf;alsd jfasldjf ljdf
+        ;lajoerfiahga;fnc,vnbkaljfdghanv
+      </Text.S>
+    </Section>
+    <Section id={SECTION_ID.CONTACT} title={SECTION_ID.CONTACT} hasDarkBackground>
+      <Text.S>
+        aljdflka fdlaj lasjf adflja;l jfa;sldjf asdljfa;lsf;alsd jfasldjf ljdf
+        ;lajoerfiahga;fnc,vnbkaljfdghanv
+      </Text.S>
+    </Section>
   </Wrapper>
 )
 

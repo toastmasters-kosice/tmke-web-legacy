@@ -6,6 +6,7 @@ export default {
     BURGUNDY: '#772432',
     CARDINAL: '#CD202C',
     EDWARD: '#A9B2B1',
+    GALLERY: '#EEEEEE',
     GOLDEN_SAND: '#F2DF74',
     WHITE: '#FFFFFF'
   },
