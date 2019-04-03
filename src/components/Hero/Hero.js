@@ -31,8 +31,6 @@ const StyledLink = styled(Link)`
   position: absolute;
   color: ${theme.colors.WHITE};
   bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
   cursor: pointer;
 `
 
