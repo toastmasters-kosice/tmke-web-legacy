@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { Link } from 'gatsby'
-import { routes } from '../../constants'
+import { FaChevronCircleDown } from 'react-icons/fa'
+import theme from '../../theme'
 
 const Wrapper = styled.div`
   width: 100%;
@@ -28,27 +29,28 @@ const StyledImg = styled(Img)`
 
 const StyledLink = styled(Link)`
   position: absolute;
-  height: 10px;
-  width: 15px;
-  background: white;
+  color: ${theme.colors.WHITE};
   bottom: 30px;
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
 `
 
-const Hero = ({ children, backgroundUrl }) =>
+const Hero = ({ children, backgroundUrl, continueTo }) =>
   <div style={{ position: 'relative', height: '100vh' }}>
     <StyledImg fixed={backgroundUrl} style={{ position: 'absolute', top: 0 }} />
     <Wrapper>
       {children}
-      <StyledLink to={routes.EDUCATION} />
+      <StyledLink to={continueTo}>
+        <FaChevronCircleDown size="3.5rem" />
+      </StyledLink>
     </Wrapper>
   </div>
 
 Hero.propTypes = {
   children: PropTypes.node.isRequired,
-  backgroundUrl: PropTypes.string
+  backgroundUrl: PropTypes.string,
+  continueTo: PropTypes.string.isRequired
 }
 
 export default Hero

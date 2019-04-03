@@ -6,7 +6,7 @@ import NavBar from '../components/NavBar'
 import { H1 } from '../components/Typography'
 import Hero from '../components/Hero'
 import theme from '../theme'
-import { SECTION_ID } from '../constants'
+import { SECTION_ID, routes } from '../constants'
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -20,7 +20,10 @@ const StyledH1 = styled(H1)`
 const LandingPage = ({ data }) => (
   <Wrapper>
     <NavBar />
-    <Hero backgroundUrl={data.file && data.file.childImageSharp.fluid}>
+    <Hero
+      backgroundUrl={data.file && data.file.childImageSharp.fluid}
+      continueTo={routes.EDUCATION}
+    >
       <StyledH1>
           Tvorime recnikov a lidrov
       </StyledH1>
