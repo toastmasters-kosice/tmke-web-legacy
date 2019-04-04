@@ -34,6 +34,38 @@ const LandingPage = ({ data }) => (
       title="Nauč sa spolu s nami"
     >
       <Text.S>
+        Podstatou nášho klubu je vzdelávanie.
+        Rozvíjaj a zdokonaľuj svoje komunikačné a líderské zručnosti v bezpečnom a podpornom
+        prostredí nášho klubu prácou na projektoch,
+        ktoré Ti umožnia budovať zručnosti použiteľné v bežnom živote.
+        Uč sa vlastným tempom na základe princípov,
+        ktoré sa uplatňujú v Toastmasters Internetional od jeho založenia v roku 1924 a:
+      </Text.S>
+      <Text.S>
+        <div>
+          <ul>
+            <li>
+              - nauč sa rečniť na verejnosti
+            </li>
+            <li>
+              - buduj svoje líderské zručnosti
+            </li>
+            <li>
+              - maximalizuj svoj potenciál
+            </li>
+            <li>
+              - rozvíjaj svoju sieť kontaktov
+            </li>
+            <li>
+              - získaj konkurenčnú výhodu v povolaní
+            </li>
+            <li>
+              - buduj sebadôveru a sebauvedomenie
+            </li>
+          </ul>
+        </div>
+      </Text.S>
+      <Text.S>
         So vzdelávacím systémom Pathways vieš získať vyše 300 unikátnych zručností.
       </Text.S>
       <Text.S>
@@ -45,13 +77,17 @@ const LandingPage = ({ data }) => (
         Sme rečnícky klub mladých ľudí, ktorý...
       </Text.S>
       <Text.S>
-        ...je súčasťou Toastmasters International
-      </Text.S>
-      <Text.S>
-        ... má 4 roky
-      </Text.S>
-      <Text.S>
-        ... už zorganizoval vyše 150 akcií
+        <ul>
+          <li>
+          ... je súčasťou Toastmasters International
+          </li>
+          <li>
+          ... má 4 roky
+          </li>
+          <li>
+          ... už zorganizoval vyše 150 akcií
+          </li>
+        </ul>
       </Text.S>
     </Section>
     <Section id={SECTION_ID.MEETINGS} title="Navštív nás">
@@ -62,13 +98,17 @@ const LandingPage = ({ data }) => (
     </Section>
     <Section id={SECTION_ID.CONTACT} title="Kontaktuj nás" hasDarkBackground>
       <Text.S>
-        osobne na stretnutiach klubu
-      </Text.S>
-      <Text.S>
-        emailom na: toastmasters.kosice@gmail.com
-      </Text.S>
-      <Text.S>
-        správou na Facebooku
+        <ul>
+          <li>
+            osobne na stretnutiach klubu
+          </li>
+          <li>
+            emailom na: toastmasters.kosice@gmail.com
+          </li>
+          <li>
+            správou na Facebooku
+          </li>
+        </ul>
       </Text.S>
     </Section>
   </Wrapper>
