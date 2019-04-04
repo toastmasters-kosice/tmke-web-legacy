@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { space } from 'styled-system'
 import theme from '../theme'
 
 const defaultTextConfig = {
@@ -14,6 +15,7 @@ const createText = ({
 }) => styled(tagName)`
   font-family: ${fontFamily};
   font-size: ${fontSize}px;
+  ${space}
 `
 
 export const Text = {
