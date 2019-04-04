@@ -7,6 +7,14 @@ import { FaChevronCircleDown } from 'react-icons/fa'
 import theme from '../../theme'
 
 const Wrapper = styled.div`
+  position: relative;
+  height: 100vh;
+  ${theme.media.mobile`
+    height: ${window.innerHeight}px;
+  `}
+`
+
+const ContentWrapper = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
@@ -35,15 +43,15 @@ const StyledLink = styled(Link)`
 `
 
 const Hero = ({ children, backgroundImage, continueTo }) =>
-  <div style={{ position: 'relative', height: '100vh' }}>
+  <Wrapper>
     <StyledImg fluid={backgroundImage} style={{ position: 'absolute', top: 0 }} />
-    <Wrapper>
+    <ContentWrapper>
       {children}
       <StyledLink to={continueTo}>
         <FaChevronCircleDown size="3.5rem" />
       </StyledLink>
-    </Wrapper>
-  </div>
+    </ContentWrapper>
+  </Wrapper>
 
 Hero.propTypes = {
   children: PropTypes.node.isRequired,
