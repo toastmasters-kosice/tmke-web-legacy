@@ -59,7 +59,7 @@ const LandingPage = ({ data }) => (
       <Text.S>
         Rozvíjaj a zdokonaľuj svoje zručnosti v bezpečnom a podpornom
         prostredí nášho klubu. Uč sa vlastným tempom na základe princípov,
-        ktoré sa uplatňujú v Toastmasters Internetional od jeho založenia v roku 1924 a:
+        ktoré sa uplatňujú v Toastmasters International od jeho založenia v roku 1924 a:
       </Text.S>
       <ul>
         <li>
