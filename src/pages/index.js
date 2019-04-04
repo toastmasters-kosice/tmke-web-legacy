@@ -12,10 +12,10 @@ import {
   GiPublicSpeaker,
   GiSeedling,
   GiShakingHands,
-  GiSpiderWeb,
-  GiWireframeGlobe
+  GiSpiderWeb
 } from 'react-icons/gi'
-import { FaFacebookMessenger } from 'react-icons/fa'
+import { FaFacebook, FaFacebookMessenger } from 'react-icons/fa'
+import tmiLogo from '../images/tmi-logo.png'
 import theme from '../theme'
 import NavBar from '../components/NavBar'
 import { H1, Text } from '../components/Typography'
@@ -24,6 +24,7 @@ import Section from '../components/Section'
 import { SECTION_ID, routes } from '../constants'
 import ListIconItem from '../components/ListIconItem'
 import IconItem from '../components/IconItem'
+import Image from '../components/Image'
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -87,25 +88,25 @@ const LandingPage = ({ data }) => (
       </Text.S>
     </Section>
     <Section id={SECTION_ID.ABOUT} title="O nás" hasDarkBackground>
-      <Text.S>
-        Sme rečnícky klub mladých ľudí, ktorý...
-      </Text.S>
       <AboutUsWrapper>
-        <IconItem
-          iconComp={GiWireframeGlobe}
-          text="... je súčasťou Toastmasters International"
-        />
+        <a href="https://www.toastmasters.org/">
+          <IconItem
+            iconComp={({ size }) => <Image src={tmiLogo} alt="toastmasters international logo" size={size} />}
+            text="Sme súčasťou Toastmasters International."
+          />
+        </a>
         <IconItem
           iconComp={GiSeedling}
-          text="... má 4 roky"
+          // Klub bol chartrovany 15.4.2015
+          text="Náš klub má 4 roky."
         />
         <IconItem
           iconComp={GiGrapes}
-          text="... už zorganizoval vyše 150 akcií"
+          text="Zorganizovali sme už vyše 150 akcií."
         />
       </AboutUsWrapper>
     </Section>
-    <Section id={SECTION_ID.MEETINGS} title="Navštív nás">
+    <Section id={SECTION_ID.MEETINGS} title="Stretnutia">
       <Text.S>
         Na našich vzdelávacích stretnutiach si môžeš pozrieť, ako
         funguje výukový proces a zadarmo vyskúšať základné roly.
@@ -125,6 +126,11 @@ const LandingPage = ({ data }) => (
           <li>
             <a href="https://msng.link/fm/toastmasters.kosice">
               <ListIconItem iconComp={FaFacebookMessenger} text="správou na Facebooku" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/toastmasters.kosice/">
+              <ListIconItem iconComp={FaFacebook} text="naša stránka na Facebooku" />
             </a>
           </li>
         </ul>
