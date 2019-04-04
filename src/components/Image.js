@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 const StyledImage = styled.img`
   height: ${({ size }) => size};
+  display: block;
 `
 
 const Image = ({ src, alt, size }) =>
