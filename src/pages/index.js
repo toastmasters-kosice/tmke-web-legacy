@@ -45,7 +45,7 @@ const LandingPage = ({ data }) => (
   <Wrapper>
     <NavBar />
     <Hero
-      backgroundUrl={data.file && data.file.childImageSharp.fluid}
+      backgroundImage={data.file && data.file.childImageSharp.fluid}
       continueTo={routes.EDUCATION}
     >
       <StyledH1>

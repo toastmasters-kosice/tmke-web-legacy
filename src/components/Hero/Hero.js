@@ -34,9 +34,9 @@ const StyledLink = styled(Link)`
   cursor: pointer;
 `
 
-const Hero = ({ children, backgroundUrl, continueTo }) =>
+const Hero = ({ children, backgroundImage, continueTo }) =>
   <div style={{ position: 'relative', height: '100vh' }}>
-    <StyledImg fixed={backgroundUrl} style={{ position: 'absolute', top: 0 }} />
+    <StyledImg fluid={backgroundImage} style={{ position: 'absolute', top: 0 }} />
     <Wrapper>
       {children}
       <StyledLink to={continueTo}>
@@ -47,7 +47,7 @@ const Hero = ({ children, backgroundUrl, continueTo }) =>
 
 Hero.propTypes = {
   children: PropTypes.node.isRequired,
-  backgroundUrl: PropTypes.string,
+  backgroundImage: PropTypes.object,
   continueTo: PropTypes.string.isRequired
 }
 
