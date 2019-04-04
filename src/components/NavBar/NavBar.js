@@ -4,13 +4,16 @@ import theme from '../../theme'
 import MenuButton from './MenuButton'
 import NavGroup from './NavGroup'
 import HomeButton from './HomeButton'
+import { NAVIGATION_HEIGHT } from '../../constants'
 
 const Wrapper = styled.div`
   width: 100%;
+  height: ${NAVIGATION_HEIGHT}px;
   position: fixed;
   z-index: 1;
   top: 0;
   display: flex;
+  align-items: center;
   flex-direction: row;
   background-color: ${theme.colors.BURGUNDY};
   box-shadow: ${theme.shadow.BOTTOM};
@@ -60,7 +63,7 @@ class NavBar extends React.Component {
     const { isMobileMenuOpen } = this.state
     return (
       <Wrapper>
-        <HomeButton p="12px 24px" />
+        <HomeButton px="24px" />
         <DesktopInnerWrapper>
           <NavGroup />
         </DesktopInnerWrapper>
