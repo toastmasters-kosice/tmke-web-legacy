@@ -9,9 +9,6 @@ import theme from '../../theme'
 const Wrapper = styled.div`
   position: relative;
   height: 100vh;
-  ${theme.media.mobile`
-    height: ${window.innerHeight}px;
-  `}
 `
 
 const ContentWrapper = styled.div`
@@ -36,10 +33,14 @@ const StyledImg = styled(Img)`
 `
 
 const StyledLink = styled(Link)`
-  position: absolute;
   color: ${theme.colors.WHITE};
-  bottom: 30px;
-  cursor: pointer;
+  ${theme.media.desktop`
+    position: absolute;
+    bottom: 30px;
+  `}
+  ${theme.media.mobile`
+    margin-top: 30px;
+  `}
 `
 
 const Hero = ({ children, backgroundImage, continueTo }) =>

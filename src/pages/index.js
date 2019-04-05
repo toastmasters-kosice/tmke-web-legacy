@@ -26,12 +26,6 @@ import ListIconItem from '../components/ListIconItem'
 import IconItem from '../components/IconItem'
 import Image from '../components/Image'
 
-const Wrapper = styled.div`
-  height: 100vh;
-  overflow-y: auto;
-  scroll-behavior: smooth;
-`
-
 const StyledH1 = styled(H1)`
   color: ${theme.colors.WHITE}
 `
@@ -44,7 +38,7 @@ const AboutUsWrapper = styled.div`
 `
 
 const LandingPage = ({ data }) => (
-  <Wrapper>
+  <React.Fragment>
     <NavBar />
     <div id={SECTION_ID.HOME} />
     <Hero
@@ -138,7 +132,7 @@ const LandingPage = ({ data }) => (
         </ul>
       </Text.S>
     </Section>
-  </Wrapper>
+  </React.Fragment>
 )
 
 LandingPage.propTypes = {
