@@ -1,5 +1,7 @@
 import { css } from 'styled-components'
 
+export const MOBILE_THRESHOLD = 600
+
 export default {
   colors: {
     ASTRONAUT_BLUE: '#004165',
@@ -26,13 +28,19 @@ export default {
   },
   media: {
     mobile: (...args) =>
-      css`@media (max-width: 600px) {
+      css`@media (max-width: ${MOBILE_THRESHOLD}px) {
         ${css(...args)}
       }
     `,
     desktop: (...args) =>
-      css`@media (min-width: 601px) {
+      css`@media (min-width: ${MOBILE_THRESHOLD + 1}px) {
         ${css(...args)}
       }`
   }
 }
+
+export const getIsMobile = () => (
+  window.innerWidth
+  || document.documentElement.clientWidth
+  || document.body.clientWidth
+) <= MOBILE_THRESHOLD

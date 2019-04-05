@@ -16,7 +16,7 @@ import {
 } from 'react-icons/gi'
 import { FaFacebook, FaFacebookMessenger } from 'react-icons/fa'
 import tmiLogo from '../images/tmi-logo.png'
-import theme from '../theme'
+import theme, { getIsMobile } from '../theme'
 import NavBar from '../components/NavBar'
 import { H1, Text } from '../components/Typography'
 import Hero from '../components/Hero'
@@ -37,6 +37,25 @@ const AboutUsWrapper = styled.div`
   
 `
 
+const SectionWrapper = styled.div`
+  display: inline-block;
+  width: 80%;
+`
+
+const StyledUl = styled.ul`
+  ${theme.media.desktop`
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 24px;
+    li:nth-child(2n+1) {
+      justify-self: flex-end;
+    }
+    padding: 24px 0;
+  `};
+`
+
+const EDUCATION_ICON_SIZE = getIsMobile() ? undefined : '3.5em'
+
 const LandingPage = ({ data }) => (
   <React.Fragment>
     <NavBar />
@@ -52,32 +71,37 @@ const LandingPage = ({ data }) => (
     <Section
       id={SECTION_ID.EDUCATION}
       title="Vzdelávanie"
+      pb="12px"
     >
-      <Text.S>
-        Rozvíjaj a zdokonaľuj svoje zručnosti v bezpečnom a podpornom
-        prostredí nášho klubu. Uč sa vlastným tempom na základe princípov,
-        ktoré sa uplatňujú v Toastmasters International od jeho založenia v roku 1924 a:
-      </Text.S>
-      <ul>
+      {!getIsMobile() && (
+        <SectionWrapper>
+          <Text.S>
+            Rozvíjaj a zdokonaľuj svoje zručnosti v bezpečnom a podpornom
+            prostredí nášho klubu. Uč sa vlastným tempom na základe princípov,
+            ktoré sa uplatňujú v Toastmasters International od jeho založenia v roku 1924 a:
+          </Text.S>
+        </SectionWrapper>)
+      }
+      <StyledUl>
         <li>
-          <ListIconItem iconComp={GiPublicSpeaker} text="nauč sa rečniť na verejnosti" />
+          <ListIconItem iconComp={GiPublicSpeaker} text="nauč sa rečniť na verejnosti" iconSize={EDUCATION_ICON_SIZE} />
         </li>
         <li>
-          <ListIconItem iconComp={GiAura} text="buduj svoje líderské zručnosti" />
+          <ListIconItem iconComp={GiAura} text="buduj svoje líderské zručnosti" iconSize={EDUCATION_ICON_SIZE} />
         </li>
         <li>
-          <ListIconItem iconComp={GiLaurelsTrophy} text="maximalizuj svoj potenciál" />
+          <ListIconItem iconComp={GiLaurelsTrophy} text="maximalizuj svoj potenciál" iconSize={EDUCATION_ICON_SIZE} />
         </li>
         <li>
-          <ListIconItem iconComp={GiSpiderWeb} text="rozvíjaj svoju sieť kontaktov" />
+          <ListIconItem iconComp={GiSpiderWeb} text="rozvíjaj svoju sieť kontaktov" iconSize={EDUCATION_ICON_SIZE} />
         </li>
         <li>
-          <ListIconItem iconComp={GiFireworkRocket} text="získaj konkurenčnú výhodu v povolaní" />
+          <ListIconItem iconComp={GiFireworkRocket} text="získaj konkurenčnú výhodu v povolaní" iconSize={EDUCATION_ICON_SIZE} />
         </li>
         <li>
-          <ListIconItem iconComp={GiHangGlider} text="buduj sebadôveru a sebauvedomenie" />
+          <ListIconItem iconComp={GiHangGlider} text="buduj sebadôveru a sebauvedomenie" iconSize={EDUCATION_ICON_SIZE} />
         </li>
-      </ul>
+      </StyledUl>
       <Text.S>
         So vzdelávacím systémom Pathways vieš získať vyše 300 unikátnych zručností.
         Aplikuj poznatky na pravidelných stretnutiach a dostaň ich do krvi.
