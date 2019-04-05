@@ -67,80 +67,81 @@ const StyledContactUl = styled.ul`
   `}
 `
 
-const LandingPage = ({ data }) => {
+const LandingPage = ({
+  data: {
+    file,
+    allMarkdownRemark: { edges: [{ node: { frontmatter } }] }
+  }
+}) => {
   const isDesktop = !getIsMobile()
+
   return (
     <React.Fragment>
       <TmNavBar />
       <div id={SECTION_ID.HOME} />
       <Hero
-        backgroundImage={data.file && data.file.childImageSharp.fluid}
+        backgroundImage={file && file.childImageSharp.fluid}
         continueTo={routes.EDUCATION}
       >
         <StyledH1>
-          Tvoríme rečníkov a lídrov
+          {frontmatter.hero.h1}
         </StyledH1>
       </Hero>
-      <Section id={SECTION_ID.EDUCATION} title="Vzdelávanie" pb="24px">
+      <Section id={SECTION_ID.EDUCATION} title={frontmatter.menu.education} pb="24px">
         {isDesktop && (
           <SectionWrapper>
-            <Text.S>
-              Rozvíjaj a zdokonaľuj svoje zručnosti v bezpečnom a podpornom
-              prostredí nášho klubu. Uč sa vlastným tempom na základe princípov,
-              ktoré sa uplatňujú v Toastmasters International od jeho založenia v roku 1924 a:
-            </Text.S>
+            <Text.S>{frontmatter.educationSection.description}</Text.S>
           </SectionWrapper>)
         }
         <StyledEduUl>
           <li>
             <ListIconItem
               iconComp={GiPublicSpeaker}
-              text="nauč sa rečniť na verejnosti"
+              text={frontmatter.educationSection.label1}
               isBig={isDesktop}
             />
           </li>
           <li>
             <ListIconItem
               iconComp={GiAura}
-              text="buduj svoje líderské zručnosti"
+              text={frontmatter.educationSection.label2}
               isBig={isDesktop}
             />
           </li>
           <li>
             <ListIconItem
               iconComp={GiLaurelsTrophy}
-              text="maximalizuj svoj potenciál"
+              text={frontmatter.educationSection.label3}
               isBig={isDesktop}
             />
           </li>
           <li>
             <ListIconItem
               iconComp={GiSpiderWeb}
-              text="rozvíjaj svoju sieť kontaktov"
+              text={frontmatter.educationSection.label4}
               isBig={isDesktop}
             />
           </li>
           <li>
             <ListIconItem
               iconComp={GiFireworkRocket}
-              text="získaj konkurenčnú výhodu v povolaní"
+              text={frontmatter.educationSection.label5}
               isBig={isDesktop}
             />
           </li>
           <li>
             <ListIconItem
               iconComp={GiHangGlider}
-              text="buduj sebadôveru a sebauvedomenie"
+              text={frontmatter.educationSection.label6}
               isBig={isDesktop}
             />
           </li>
         </StyledEduUl>
         <Text.S>
-          So vzdelávacím systémom Pathways vieš získať vyše 300 unikátnych zručností.
-          Aplikuj poznatky na pravidelných stretnutiach a dostaň ich do krvi.
+          {frontmatter.educationSection.final}
         </Text.S>
       </Section>
-      <Section id={SECTION_ID.ABOUT} title="O nás" hasDarkBackground>
+      <Section id={SECTION_ID.ABOUT} title={frontmatter.menu.about} hasDarkBackground>
         <StyledAboutUl>
           <li>
             <IconItem
@@ -148,12 +149,13 @@ const LandingPage = ({ data }) => {
               isBig={isDesktop}
               text={
                 <span>
-                  Sme súčasťou&nbsp;
+                  {frontmatter.aboutSection.label1part1}
+                  &nbsp;
                   <ExternalLink
                     to="https://www.toastmasters.org/"
                     textComp={isDesktop ? Text.M : Text.S}
                   >
-                    Toastmasters International
+                    {frontmatter.aboutSection.link}
                   </ExternalLink>
                   .
                 </span>
@@ -165,34 +167,34 @@ const LandingPage = ({ data }) => {
               iconComp={GiSeedling}
               isBig={isDesktop}
               // Klub bol chartrovany 15.4.2015
-              text="Náš klub má 4 roky."
+              text={frontmatter.aboutSection.label2}
             />
           </li>
           <li>
             <IconItem
               iconComp={GiGrapes}
               isBig={isDesktop}
-              text="Zorganizovali sme už vyše 150 akcií."
+              text={frontmatter.aboutSection.label3}
             />
           </li>
         </StyledAboutUl>
       </Section>
-      <Section id={SECTION_ID.MEETINGS} title="Stretnutia" pb="24px">
-        <Text.S>
-          Na našich vzdelávacích stretnutiach si môžeš pozrieť, ako
-          funguje výukový proces a zadarmo vyskúšať základné roly.
-        </Text.S>
+      <Section id={SECTION_ID.MEETINGS} title={frontmatter.menu.meetings} pb="24px">
+        <Text.S>{frontmatter.meetingsSection.description}</Text.S>
       </Section>
-      <Section id={SECTION_ID.CONTACT} title="Kontakt" hasDarkBackground>
+      <Section id={SECTION_ID.CONTACT} title={frontmatter.menu.contact} hasDarkBackground>
         <StyledContactUl>
           <li>
-            <ListIconItem iconComp={GiShakingHands} text="osobne na stretnutiach klubu" />
+            <ListIconItem
+              iconComp={GiShakingHands}
+              text={frontmatter.contactSection.label1}
+            />
           </li>
           <li>
-            <a href={`mailto:${'toastmasters.kosice@gmail.com'}`}>
+            <a href={`mailto:${frontmatter.contactSection.email}`}>
               <ListIconItem
                 iconComp={GiEnvelope}
-                text="toastmasters.kosice@gmail.com"
+                text={frontmatter.contactSection.label2}
                 isBold
               />
             </a>
@@ -201,7 +203,7 @@ const LandingPage = ({ data }) => {
             <a href="https://msng.link/fm/toastmasters.kosice">
               <ListIconItem
                 iconComp={FaFacebookMessenger}
-                text="správou na Facebooku"
+                text={frontmatter.contactSection.label3}
                 isBold
               />
             </a>
@@ -210,7 +212,7 @@ const LandingPage = ({ data }) => {
             <a href="https://www.facebook.com/toastmasters.kosice/">
               <ListIconItem
                 iconComp={FaFacebook}
-                text="naša stránka na Facebooku"
+                text={frontmatter.contactSection.label4}
                 isBold
               />
             </a>
@@ -237,6 +239,49 @@ export const query = graphql`
       childImageSharp {
         fluid(maxHeight: 640) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            title
+            hero {
+              h1
+            }
+            menu {
+              education
+              about
+              meetings
+              contact
+            }
+            educationSection {
+              description
+              label1
+              label2
+              label3
+              label4
+              label5
+              label6
+              final
+            }
+            aboutSection {
+              label1part1
+              link
+              label2
+              label3
+            }
+            meetingsSection {
+              description
+            }
+            contactSection {
+              label1
+              label2
+              label3
+              label4
+            }
+          }
         }
       }
     }
