@@ -24,7 +24,7 @@ const IconItem = ({ iconComp: IconComp, text, isBig }) => {
 IconItem.propTypes = {
   iconComp: PropTypes.func.isRequired,
   isBig: PropTypes.bool.isRequired,
-  text: PropTypes.string.isRequired
+  text: PropTypes.node.isRequired
 }
 
 export default IconItem

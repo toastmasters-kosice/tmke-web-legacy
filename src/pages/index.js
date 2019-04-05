@@ -15,7 +15,6 @@ import {
   GiSpiderWeb
 } from 'react-icons/gi'
 import { FaFacebook, FaFacebookMessenger } from 'react-icons/fa'
-import tmiLogo from '../images/tmi-logo.png'
 import theme, { getIsMobile } from '../theme'
 import { H1, Text } from '../components/Typography'
 import Hero from '../components/Hero'
@@ -23,9 +22,9 @@ import Section from '../components/Section'
 import { SECTION_ID, routes } from '../constants'
 import ListIconItem from '../components/ListIconItem'
 import IconItem from '../components/IconItem'
-import Image from '../components/Image'
 import ExternalLink from '../components/ExternalLink'
 import TmNavBar from '../tmComponents/TmNavBar'
+import TmiLogo from '../tmComponents/TmiLogo'
 
 const StyledH1 = styled(H1)`
   color: ${theme.colors.WHITE}
@@ -145,11 +144,7 @@ const LandingPage = ({ data }) => {
         <StyledAboutUl>
           <li>
             <IconItem
-              iconComp={({ size }) => <Image
-                src={tmiLogo}
-                alt="toastmasters international logo"
-                size={size}
-              />}
+              iconComp={TmiLogo}
               isBig={isDesktop}
               text={
                 <span>

@@ -16,7 +16,7 @@ ExternalLink.defaultProps = {
 ExternalLink.propTypes = {
   children: PropTypes.string.isRequired,
   to: PropTypes.string.isRequired,
-  textComp: PropTypes.func
+  textComp: PropTypes.object
 }
 
 export default ExternalLink
