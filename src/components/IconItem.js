@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 12px;
+  text-align: center
 `
 
 const IconItem = ({ iconComp: IconComp, text, isBig }) => {

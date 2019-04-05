@@ -25,7 +25,7 @@ const StyledText = styled(Text.M)`
 
 const NavLink = ({ children, to, ...props }) =>
   <StyledLink to={to} {...props}>
-    <StyledText>
+    <StyledText isBold>
       {children}
     </StyledText>
   </StyledLink>

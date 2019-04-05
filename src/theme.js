@@ -39,8 +39,13 @@ export default {
   }
 }
 
+const globalWindow = typeof window !== 'undefined' ? window : {}
+const globalDocument = typeof document !== 'undefined' ? document : {
+  documentElement: {},
+  body: {}
+}
 export const getIsMobile = () => (
-  window.innerWidth
-  || document.documentElement.clientWidth
-  || document.body.clientWidth
+  globalWindow.innerWidth
+  || globalDocument.documentElement.clientWidth
+  || globalDocument.body.clientWidth
 ) <= MOBILE_THRESHOLD
