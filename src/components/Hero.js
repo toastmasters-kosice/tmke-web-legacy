@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
 import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 import { FaChevronCircleDown } from 'react-icons/fa'
-import theme from '../../theme'
+import theme from '../theme'
 
 const Wrapper = styled.div`
   position: relative;
