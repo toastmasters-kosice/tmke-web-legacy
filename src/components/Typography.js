@@ -15,6 +15,7 @@ const createText = ({
 }) => styled(tagName)`
   font-family: ${fontFamily};
   font-size: ${fontSize}px;
+  font-weight: ${({ isBold }) => isBold ? 'bold' : 'lighter'};
   ${space}
 `
 

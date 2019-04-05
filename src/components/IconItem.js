@@ -8,19 +8,21 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 12px;
-  width: 100%;
 `
 
-const IconItem = ({ iconComp: IconComp, text }) =>
-  <Wrapper>
-    <IconComp size="5em" />
-    <Text.S pl="12px">
-      {text}
-    </Text.S>
-  </Wrapper>
+const IconItem = ({ iconComp: IconComp, text, isBig }) => {
+  const TextComp = isBig ? Text.M : Text.S
+  return (
+    <Wrapper>
+      <IconComp size={isBig ? '7em' : '5em'} />
+      <TextComp pt="12px">{text}</TextComp>
+    </Wrapper>
+  )
+}
 
 IconItem.propTypes = {
   iconComp: PropTypes.func.isRequired,
+  isBig: PropTypes.bool.isRequired,
   text: PropTypes.string.isRequired
 }
 
