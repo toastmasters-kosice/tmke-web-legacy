@@ -17,7 +17,6 @@ import {
 import { FaFacebook, FaFacebookMessenger } from 'react-icons/fa'
 import tmiLogo from '../images/tmi-logo.png'
 import theme, { getIsMobile } from '../theme'
-import NavBar from '../components/NavBar'
 import { H1, Text } from '../components/Typography'
 import Hero from '../components/Hero'
 import Section from '../components/Section'
@@ -26,6 +25,7 @@ import ListIconItem from '../components/ListIconItem'
 import IconItem from '../components/IconItem'
 import Image from '../components/Image'
 import ExternalLink from '../components/ExternalLink'
+import TmNavBar from '../tmComponents/TmNavBar'
 
 const StyledH1 = styled(H1)`
   color: ${theme.colors.WHITE}
@@ -72,7 +72,7 @@ const LandingPage = ({ data }) => {
   const isDesktop = !getIsMobile()
   return (
     <React.Fragment>
-      <NavBar />
+      <TmNavBar />
       <div id={SECTION_ID.HOME} />
       <Hero
         backgroundImage={data.file && data.file.childImageSharp.fluid}
