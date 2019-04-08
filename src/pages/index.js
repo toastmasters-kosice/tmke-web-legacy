@@ -44,6 +44,10 @@ const StyledEduUl = styled.ul`
     grid-column-gap: 24px;
     li:nth-child(2n+1) {
       justify-self: flex-end;
+      text-align: right;
+    }
+    li:nth-child(2n) {
+      text-align: left;
     }
     padding: 24px 0;
   `};
