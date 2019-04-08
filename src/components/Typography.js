@@ -13,6 +13,7 @@ const createText = ({
   tagName,
   fontSize
 }) => styled(tagName)`
+  display: inline-block;
   font-family: ${fontFamily};
   font-size: ${fontSize}px;
   font-weight: ${({ isBold }) => isBold ? 'bold' : 'lighter'};

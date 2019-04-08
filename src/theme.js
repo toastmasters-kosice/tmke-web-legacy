@@ -44,8 +44,7 @@ const globalDocument = typeof document !== 'undefined' ? document : {
   documentElement: {},
   body: {}
 }
-export const getIsMobile = () => (
-  globalWindow.innerWidth
+export const getWindowWidth = () => globalWindow.innerWidth
   || globalDocument.documentElement.clientWidth
   || globalDocument.body.clientWidth
-) <= MOBILE_THRESHOLD
+export const getIsMobile = () => getWindowWidth() <= MOBILE_THRESHOLD

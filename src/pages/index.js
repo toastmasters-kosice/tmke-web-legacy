@@ -26,6 +26,7 @@ import ExternalLink from '../components/ExternalLink'
 import TmNavBar from '../tmComponents/TmNavBar'
 import TmiLogo from '../tmComponents/TmiLogo'
 import Head from '../tmComponents/Head'
+import TmMap from '../tmComponents/TmMap'
 
 const StyledH1 = styled(H1)`
   color: ${theme.colors.WHITE}
@@ -66,6 +67,23 @@ const StyledContactUl = styled.ul`
     display: flex;
     justify-content: center;
   `}
+`
+const MeetingsWrapper = styled.div`
+  padding-top: 12px;
+  display: grid;
+  width: 100%;
+  grid-template-rows: auto auto auto;
+  grid-row-gap: 24px;
+  text-align: center;
+`
+
+const CalendarPlaceholder = styled.div`
+  width: 100%;
+  height: 400px;
+  background: ${theme.colors.GALLERY};
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const LandingPage = ({
@@ -183,6 +201,19 @@ const LandingPage = ({
       </Section>
       <Section id={SECTION_ID.MEETINGS} title={frontmatter.menu.meetings} pb="24px">
         <Text.S>{frontmatter.meetingsSection.description}</Text.S>
+        <MeetingsWrapper>
+          <CalendarPlaceholder>
+            <Text.S>Calendar</Text.S>
+          </CalendarPlaceholder>
+          <TmMap
+            isMobileView={!isDesktop}
+            {...frontmatter.meetingsSection.primaryMap}
+          />
+          <TmMap
+            isMobileView={!isDesktop}
+            {...frontmatter.meetingsSection.secondaryMap}
+          />
+        </MeetingsWrapper>
       </Section>
       <Section id={SECTION_ID.CONTACT} title={frontmatter.menu.contact} hasDarkBackground>
         <StyledContactUl>
@@ -281,6 +312,16 @@ export const query = graphql`
             }
             meetingsSection {
               description
+              primaryMap {
+                src
+                title
+                description
+              }
+              secondaryMap {
+                src
+                title
+                description
+              }
             }
             contactSection {
               label1
