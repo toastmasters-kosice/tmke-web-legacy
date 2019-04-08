@@ -36,7 +36,9 @@ const Section = ({ id, title, children, hasDarkBackground, ...props }) =>
   <Wrapper hasDarkBackground={hasDarkBackground} {...props}>
     <StyledTitle>{title}</StyledTitle>
     <NavigationElement id={id} />
-    {children}
+    <div>
+      {children}
+    </div>
   </Wrapper>
 
 Section.propTypes = {

@@ -53,7 +53,7 @@ const StyledAboutUl = styled.ul`
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     grid-column-gap: 24px;
-    padding-bottom: 24px;
+    padding-bottom: 12px;
     li: first-child {
       justify-self: flex-end;
     }
@@ -75,6 +75,16 @@ const MeetingsWrapper = styled.div`
   grid-template-rows: auto auto auto;
   grid-row-gap: 24px;
   text-align: center;
+  ${theme.media.desktop`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  `};
+`
+
+const MeetingsDescription = styled(Text.S)`
+  text-align: center;
 `
 
 const CalendarPlaceholder = styled.div`
@@ -84,6 +94,10 @@ const CalendarPlaceholder = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  ${theme.media.desktop`
+    margin: 0 12px;
+    max-width: 400px;
+  `}
 `
 
 const LandingPage = ({
@@ -199,8 +213,8 @@ const LandingPage = ({
           </li>
         </StyledAboutUl>
       </Section>
-      <Section id={SECTION_ID.MEETINGS} title={frontmatter.menu.meetings} pb="24px">
-        <Text.S>{frontmatter.meetingsSection.description}</Text.S>
+      <Section id={SECTION_ID.MEETINGS} title={frontmatter.menu.meetings} pb="12px">
+        <MeetingsDescription>{frontmatter.meetingsSection.description}</MeetingsDescription>
         <MeetingsWrapper>
           <CalendarPlaceholder>
             <Text.S>Calendar</Text.S>
