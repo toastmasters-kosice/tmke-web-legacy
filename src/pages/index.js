@@ -298,6 +298,7 @@ export const query = graphql`
               title
               description
               imageUrl
+              websiteUrl
             }
             hero {
               h1

@@ -6,7 +6,8 @@ import Helmet from 'react-helmet'
 const TmHead = ({
   title,
   description,
-  imageUrl
+  imageUrl,
+  websiteUrl
 }) =>
   <Helmet>
     <title>{title}</title>
@@ -14,13 +15,13 @@ const TmHead = ({
     <meta name="description" content={description} />
 
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={location.origin} />
+    <meta property="og:url" content={websiteUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={imageUrl} />
 
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={location.origin} />
+    <meta property="twitter:url" content={websiteUrl} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={imageUrl} />
@@ -29,6 +30,7 @@ const TmHead = ({
 TmHead.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
+  websiteUrl: PropTypes.string,
   imageUrl: PropTypes.string
 }
 
