@@ -25,6 +25,7 @@ import IconItem from '../components/IconItem'
 import ExternalLink from '../components/ExternalLink'
 import TmNavBar from '../tmComponents/TmNavBar'
 import TmiLogo from '../tmComponents/TmiLogo'
+import Head from '../tmComponents/Head'
 
 const StyledH1 = styled(H1)`
   color: ${theme.colors.WHITE}
@@ -77,6 +78,7 @@ const LandingPage = ({
 
   return (
     <React.Fragment>
+      <Head {...frontmatter.head} />
       <TmNavBar />
       <div id={SECTION_ID.HOME} />
       <Hero
@@ -247,6 +249,11 @@ export const query = graphql`
         node {
           frontmatter {
             title
+            head {
+              title
+              description
+              imageUrl
+            }
             hero {
               h1
             }

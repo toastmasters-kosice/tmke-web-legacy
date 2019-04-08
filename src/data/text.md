@@ -1,4 +1,8 @@
 ---
+head:
+  title: 'TM Košice'
+  description: 'Toastmasters Košice je rečnicky a líderský klub. Jeho cieľom je vytvarať pozitívne a bezpečné  podporné prostredie pre rozvoj ich zručností.'
+  imageUrl: '/toast.jpg'
 hero: 
   h1: 'Tvoríme rečníkov a lídrov'
 menu: 
