@@ -25,7 +25,7 @@ import IconItem from '../components/IconItem'
 import ExternalLink from '../components/ExternalLink'
 import TmNavBar from '../tmComponents/TmNavBar'
 import TmiLogo from '../tmComponents/TmiLogo'
-import Head from '../tmComponents/Head'
+import TmHead from '../tmComponents/TmHead'
 import TmMap from '../tmComponents/TmMap'
 
 const StyledH1 = styled(H1)`
@@ -96,7 +96,7 @@ const LandingPage = ({
 
   return (
     <React.Fragment>
-      <Head {...frontmatter.head} />
+      <TmHead {...frontmatter.head} />
       <TmNavBar />
       <div id={SECTION_ID.HOME} />
       <Hero
