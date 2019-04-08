@@ -34,8 +34,8 @@ const NavigationElement = styled.div`
 
 const Section = ({ id, title, children, hasDarkBackground, ...props }) =>
   <Wrapper hasDarkBackground={hasDarkBackground} {...props}>
-    <StyledTitle>{title}</StyledTitle>
-    <NavigationElement id={id} />
+    {title && <StyledTitle>{title}</StyledTitle>}
+    {id && <NavigationElement id={id} />}
     <div>
       {children}
     </div>

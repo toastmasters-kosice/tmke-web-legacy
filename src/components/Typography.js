@@ -30,16 +30,19 @@ export const Text = {
 
 export const H1 = createText({
   ...defaultTextConfig,
+  fontFamily: theme.fontFamily.MONSERRAT,
   tagName: 'h1',
   fontSize: theme.fontSize.H1
 })
 export const H2 = createText({
   ...defaultTextConfig,
+  fontFamily: theme.fontFamily.MONSERRAT,
   tagName: 'h2',
   fontSize: theme.fontSize.H2
 })
 export const H3 = createText({
   ...defaultTextConfig,
+  fontFamily: theme.fontFamily.MONSERRAT,
   tagName: 'h3',
   fontSize: theme.fontSize.H3
 })

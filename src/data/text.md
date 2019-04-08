@@ -42,4 +42,75 @@ contactSection:
   email: 'toastmasters.kosice@gmail.com'
   label3: 'správou na Facebooku'
   label4: 'naša stránka na Facebooku'
+forMembers:
+  leadersTitle: Vedenie klubu
+  roles: [
+    "Prezident - Jozef Starúch", 
+    "Viceprezident pre vzdelávanie - Jana Kolesárová", 
+    "Tajomník - Vlado Záhradník", 
+    "Viceprezident pre vzťahy s verejnosťou - Ján Šándor", 
+    "Viceprezident pre členstvo - Jozef Takáč", 
+    "Pokladník - Jozef Starúch", 
+    "Technický vedúci - Lukáš Bičuš" 
+  ]
+  interestingLinksTitle: Zaujímavé linky
+  announcementsTitle: Oznamy
+  links:
+    - subtitle: Toastmasters International
+      list:
+      - title: Pathways basecamp
+        url: 'https://www.toastmasters.org/pathways/basecamporpathways'
+      - title: Roly na stretnutí a ich význam
+        url: 'https://www.toastmasters.org/membership/club-meeting-roles'
+      - title: História TMI
+        url: https://www.toastmasters.org/about/history
+      - title: TM a súťaže
+        url: https://www.toastmasters.org/leadership-central/speech-contests
+      - title: Leathership letter
+        url: https://www.toastmasters.org/leadership-central/the-leader-letter
+      - title: TM magazín
+        url: https://www.toastmasters.org/magazine
+      - title: TM roly vo vedení
+        url: https://sites.google.com/site/royalspeakeasytoastmastersclub/contuct-us/description-of-roles
+    - subtitle: Košice
+      list:
+      - title: Easyspeak
+        url: 'http://tmclub.eu/'
+      - title: Toastmasters Košice na FB
+        url: 'https://www.facebook.com/toastmasters.kosice/'
+      - title: TM Mastermind
+        url: 'https://www.facebook.com/groups/799357410137785/'
+      - title: TM Košice v aktualnom roku - DCP
+        url: 'http://dashboards.toastmasters.org/ClubReport.aspx?id=04634798'
+      - title: Zápisnice vedenia klubu
+        url: 'https://github.com/toastmasters-kosice/vedenie-klubu'
+    - subtitle: Kluby na Slovensku
+      list:
+      - title: Toastmasters Žilina
+        url: 'https://www.facebook.com/toastmasterszilina/'
+      - title: Toastmasters Trnava
+        url: 'https://www.facebook.com/ToastmastersTrnava/'
+      - title: Toastmasters Nitra
+        url: 'https://www.facebook.com/toastmastersnitra/'
+      - title: Toastmasters Levice
+        url: 'https://www.facebook.com/ToastmastersLevice/'
+      - title: Toastmasters Petržalka
+        url: 'https://www.facebook.com/ToastmastersPetrzalka/'
+      - title: Slovenskí Toastmasters
+        url: 'https://www.facebook.com/SlovenskiToastmasters'
+    - subtitle: Populárni Toastmastri
+      list:
+      - title: Andrej Mažáry
+        url: 'https://www.vesele-veci.sk/blog/andrej-mazary-kym-chcete-byt-takto-o-rok/'
 ---
+
+## Oznamy
+Juchuuu, mame novy web :)
+
+### Mame sa radi
+- lebo sme dobri
+- lebo nie sme zli
+- lebo si to zasluzime
+
+### Trochu menej dolezita linka
+Tak tu vam pekne krasne pisem ohladom Vasho [postoja](https://postoj.com).
