@@ -221,7 +221,15 @@ const LandingPage = ({
         <MeetingsDescription>{frontmatter.meetingsSection.description}</MeetingsDescription>
         <MeetingsWrapper>
           <CalendarPlaceholder>
-            <Text.S>Calendar</Text.S>
+            <iframe
+              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftoastmasters.kosice%2F&tabs=events&width=400&height=400&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=405263680205819"
+              title="Eventy"
+              width="400"
+              height="400"
+              style={{ border: 'none', overflow: 'hidden' }}
+              allowTransparency="true"
+              allow="encrypted-media"
+            />
           </CalendarPlaceholder>
           <TmMap
             isMobileView={!isDesktop}
