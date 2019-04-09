@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { space } from 'styled-system'
 import slugify from 'slugify'
+import { getIsMobile } from '../theme'
 import ExternalLink from '../components/ExternalLink'
 import { H3 } from '../components/Typography'
-import { getIsMobile } from '../theme'
 
 const Column = styled.div`
   display: flex;
@@ -13,27 +13,45 @@ const Column = styled.div`
   ${space}
 `
 
-const Grid = styled.div`
+const DesktopRow = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
 `
 
-const TmLinks = ({ links }) => {
-  const isMobile = getIsMobile()
-  const CompWrapper = isMobile ? Column : Grid
-  return (
-    <CompWrapper>
+const TmLinks = ({ links }) => getIsMobile()
+  ? (
+    <Column>
       {links.map(({ subtitle, list }) => (
-        <Column pt="12px" key={slugify(subtitle)}>
+        <React.Fragment key={slugify(subtitle)}>
+          <H3 pt="12px">{subtitle}</H3>
+          {list.map(({ url, title }) => (
+            <ExternalLink
+              key={slugify(url)}
+              to={url}
+              py="12px"
+            >{title}
+            </ExternalLink>
+          ))}
+        </React.Fragment>
+      ))}
+    </Column>)
+  : (
+    <DesktopRow>
+      {links.map(({ subtitle, list }) => (
+        <Column key={slugify(subtitle)} p="0 12px">
           <H3>{subtitle}</H3>
           {list.map(({ url, title }) => (
-            <ExternalLink key={slugify(url)} to={url} py="12px">{title}</ExternalLink>
+            <ExternalLink
+              key={slugify(url)}
+              to={url}
+              py="12px"
+            >{title}
+            </ExternalLink>
           ))}
         </Column>
       ))}
-    </CompWrapper>
-  )
-}
+    </DesktopRow>)
 
 TmLinks.propTypes = {
   links: PropTypes.arrayOf(PropTypes.shape({
