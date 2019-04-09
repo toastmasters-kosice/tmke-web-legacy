@@ -28,7 +28,7 @@ const TmMap = ({ isMobileView, title, src, description }) => {
         title={title}
         width={width}
         height={Math.min(BASE_SIZE, width)}
-        id={slugify(title, '-')}
+        id={slugify(title)}
         src={src}
       />
       {!isMobileView && (

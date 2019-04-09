@@ -24,10 +24,10 @@ const TmLinks = ({ links }) => {
   return (
     <CompWrapper>
       {links.map(({ subtitle, list }) => (
-        <Column pt="12px" key={slugify(subtitle, '-')}>
+        <Column pt="12px" key={slugify(subtitle)}>
           <H3>{subtitle}</H3>
           {list.map(({ url, title }) => (
-            <ExternalLink key={slugify(url, '-')} to={url} py="12px">{title}</ExternalLink>
+            <ExternalLink key={slugify(url)} to={url} py="12px">{title}</ExternalLink>
           ))}
         </Column>
       ))}

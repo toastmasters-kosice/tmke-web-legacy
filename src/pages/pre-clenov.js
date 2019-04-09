@@ -89,7 +89,7 @@ const ForMembersPage = ({
     <Section title={frontmatter.forMembers.leadersTitle} pb="12px">
       <RolesWrapper count={frontmatter.forMembers.roles.length}>
         {frontmatter.forMembers.roles.map(role => (
-          <TmLeaderRole key={slugify(role, '-')}>
+          <TmLeaderRole key={slugify(role)}>
             {role}
           </TmLeaderRole>
         ))}
