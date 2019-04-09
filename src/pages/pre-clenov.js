@@ -42,7 +42,6 @@ const RolesWrapper = styled.div`
 const Announcements = styled.div`
   h2, h3 {
     font-weight: lighter;
-    display: inline-block;
     font-family: ${theme.fontFamily.MONSERRAT};
   }
   h2 {
@@ -56,21 +55,26 @@ const Announcements = styled.div`
     font-family: ${theme.fontFamily.LATO};
     font-weight: lighter;
     font-size: ${theme.fontSize.M}px;
-    display: block;
     margin-block-start: 12px;
     margin-block-end: 12px;
     margin-inline-start: 0;
     margin-inline-end: 0;
   }
+  p {
+    display: block;
+  }
   ul {
     padding-inline-start: 24px;
+    text-align: center;
+    display: inline-block;
   }
   li {
     font-size: ${theme.fontSize.M}px;
     list-style-type: disc;
+    width: fit-content;
   }
   a {
-  font-weight: bold;
+    font-weight: bold;
   }
 `
 
