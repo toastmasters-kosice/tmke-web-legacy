@@ -40,7 +40,7 @@ const RolesWrapper = styled.div`
 `
 
 const Announcements = styled.div`
-  h2, h3{
+  h2, h3 {
     font-weight: lighter;
     display: inline-block;
     font-family: ${theme.fontFamily.MONSERRAT};
@@ -53,6 +53,8 @@ const Announcements = styled.div`
     font-size: ${theme.fontSize.H3}px;
   }
   p, ul {
+    font-family: ${theme.fontFamily.LATO};
+    font-weight: lighter;
     font-size: ${theme.fontSize.M}px;
     display: block;
     margin-block-start: 12px;
