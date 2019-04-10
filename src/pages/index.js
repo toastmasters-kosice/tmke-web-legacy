@@ -217,7 +217,7 @@ const LandingPage = ({
                 {...frontmatter.meetingsSection.calendar}
               />)}
           </MeetingItemWrapper>
-          <MeetingItemWrapper description={frontmatter.meetingsSection.calendar.description}>
+          <MeetingItemWrapper description={frontmatter.meetingsSection.primaryMap.description}>
             {({ width, height }) => (
               <Map
                 width={width}
@@ -225,7 +225,7 @@ const LandingPage = ({
                 {...frontmatter.meetingsSection.primaryMap}
               />)}
           </MeetingItemWrapper>
-          <MeetingItemWrapper description={frontmatter.meetingsSection.calendar.description}>
+          <MeetingItemWrapper description={frontmatter.meetingsSection.secondaryMap.description}>
             {({ width, height }) => (
               <Map
                 width={width}
