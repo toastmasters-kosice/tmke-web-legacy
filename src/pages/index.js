@@ -90,7 +90,7 @@ const MeetingsWrapper = styled.div`
   `};
 `
 
-const MeetingsDescription = styled(Text.S)`
+const SectionDescription = styled(Text.S)`
   text-align: center;
 `
 
@@ -118,7 +118,7 @@ const LandingPage = ({
       <Section id={SECTION_ID.EDUCATION} title={frontmatter.menu.education} pb="24px">
         {isDesktop && (
           <SectionWrapper>
-            <Text.S>{frontmatter.educationSection.description}</Text.S>
+            <SectionDescription>{frontmatter.educationSection.description}</SectionDescription>
           </SectionWrapper>)
         }
         <StyledEduUl>
@@ -165,9 +165,9 @@ const LandingPage = ({
             />
           </li>
         </StyledEduUl>
-        <Text.S>
+        <SectionDescription>
           {frontmatter.educationSection.final}
-        </Text.S>
+        </SectionDescription>
       </Section>
       <Section id={SECTION_ID.ABOUT} title={frontmatter.menu.about} hasDarkBackground>
         <StyledAboutUl>
@@ -208,7 +208,7 @@ const LandingPage = ({
         </StyledAboutUl>
       </Section>
       <Section id={SECTION_ID.MEETINGS} title={frontmatter.menu.meetings} pb="12px">
-        <MeetingsDescription>{frontmatter.meetingsSection.description}</MeetingsDescription>
+        <SectionDescription>{frontmatter.meetingsSection.description}</SectionDescription>
         <MeetingsWrapper>
           <MeetingItemWrapper description={frontmatter.meetingsSection.calendar.description}>
             {({ width, height }) => (
