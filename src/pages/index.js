@@ -24,6 +24,7 @@ import ListIconItem from '../components/ListIconItem'
 import IconItem from '../components/IconItem'
 import Map from '../components/Map'
 import ExternalLink from '../components/ExternalLink'
+import withRefreshOnResize from '../components/withRefreshOnResize'
 import TmNavBar from '../tmComponents/TmNavBar'
 import TmiLogo from '../tmComponents/TmiLogo'
 import TmHead from '../tmComponents/TmHead'
@@ -363,4 +364,4 @@ export const query = graphql`
   }
 `
 
-export default LandingPage
+export default withRefreshOnResize(LandingPage)

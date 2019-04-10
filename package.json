@@ -27,6 +27,7 @@
     "gatsby-source-filesystem": "^2.0.28",
     "gatsby-transformer-remark": "^2.3.8",
     "gatsby-transformer-sharp": "^2.1.17",
+    "lodash.debounce": "^4.0.8",
     "name-that-color": "^0.1.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.5",

@@ -6,6 +6,7 @@ import slugify from 'slugify'
 import theme from '../theme'
 import { NAVIGATION_HEIGHT } from '../constants'
 import Section from '../components/Section'
+import withRefreshOnResize from '../components/withRefreshOnResize'
 import TmHead from '../tmComponents/TmHead'
 import TmNavBar from '../tmComponents/TmNavBar'
 import TmLeaderRole from '../tmComponents/TmLeaderRole'
@@ -150,4 +151,4 @@ export const query = graphql`
   }
 `
 
-export default ForMembersPage
+export default withRefreshOnResize(ForMembersPage)

@@ -1,6 +1,6 @@
 import { css } from 'styled-components'
 
-export const MOBILE_THRESHOLD = 600
+export const MOBILE_THRESHOLD = 736
 
 export default {
   colors: {
@@ -44,7 +44,7 @@ const globalDocument = typeof document !== 'undefined' ? document : {
   documentElement: {},
   body: {}
 }
-export const getWindowWidth = () => globalWindow.innerWidth
-  || globalDocument.documentElement.clientWidth
+export const getWindowWidth = () => globalDocument.documentElement.clientWidth
   || globalDocument.body.clientWidth
+  || globalWindow.innerWidth
 export const getIsMobile = () => getWindowWidth() <= MOBILE_THRESHOLD
