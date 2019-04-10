@@ -7,15 +7,14 @@ const TmHead = ({
   title,
   description,
   imageUrl,
+  keywords,
   websiteUrl
 }) =>
   <Helmet htmlAttributes={{ lang: 'sk' }}>
-    <meta charSet="utf-8" />
-    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content={websiteUrl} />
@@ -33,6 +32,7 @@ const TmHead = ({
 TmHead.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
+  keywords: PropTypes.string,
   websiteUrl: PropTypes.string,
   imageUrl: PropTypes.string
 }

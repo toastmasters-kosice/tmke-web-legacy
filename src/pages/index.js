@@ -303,6 +303,7 @@ export const query = graphql`
             head {
               title
               description
+              keywords
               imageUrl
               websiteUrl
             }
