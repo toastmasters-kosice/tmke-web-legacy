@@ -336,7 +336,6 @@ export const query = graphql`
             meetingsSection {
               description
               calendar {
-                src
                 title
                 description
               }
