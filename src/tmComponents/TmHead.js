@@ -16,6 +16,8 @@ const TmHead = ({
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
     <meta property="og:type" content="website" />
     <meta property="og:url" content={websiteUrl} />
     <meta property="og:title" content={title} />
