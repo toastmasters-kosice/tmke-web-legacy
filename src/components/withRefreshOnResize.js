@@ -9,7 +9,7 @@ const withRefreshOnResize = (Comp) => {
     }
     handleResize = debounce(() => {
       this.setState({ width: getWindowWidth() })
-    }, 2000)
+    }, 100)
     componentDidMount() {
       this.handleResize()
       window.addEventListener('resize', this.handleResize)
