@@ -9,7 +9,7 @@ const TmHead = ({
   imageUrl,
   websiteUrl
 }) =>
-  <Helmet>
+  <Helmet htmlAttributes={{ lang: 'sk' }}>
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
