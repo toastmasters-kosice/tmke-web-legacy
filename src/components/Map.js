@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import slugify from 'slugify'
 
 const MapRouter = styled.div`
   position:relative;
@@ -15,14 +16,14 @@ const GMapCanvas = styled.div`
   width:${({ width }) => width}px;
 `
 
-const Map = ({ width, height, title, id, src }) => (
+const Map = ({ width, height, title, src }) => (
   <MapRouter height={height} width={width}>
     <GMapCanvas height={height} width={width}>
       <iframe
         title={title}
         height={height}
         width={width}
-        id={id}
+        id={slugify(title)}
         src={src}
         frameBorder="0"
         scrolling="no"
@@ -38,8 +39,7 @@ Map.propTypes = {
   src: PropTypes.string.isRequired,
   width: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired
 }
 
 export default Map

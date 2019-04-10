@@ -28,6 +28,10 @@ aboutSection:
   label3: 'Zorganizovali sme už vyše 150 akcií.'
 meetingsSection: 
   description: 'Na našich vzdelávacích stretnutiach si môžeš pozrieť, ako funguje výukový proces a zadarmo vyskúšať základné roly.'
+  calendar:
+    src: 'https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftoastmasters.kosice%2F&tabs=events&width=400&height=400&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=405263680205819'
+    title: Eventy z facebooku
+    description: Dátum a miesto najbližšieho stretnutia nájdeš ľahko na facebooku
   primaryMap:
     src: 'https://maps.google.com/maps?q=Gorkeho%202%20Kosice&t=&z=13&ie=UTF8&iwloc=&output=embed'
     title: Tabačka

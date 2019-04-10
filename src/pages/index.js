@@ -22,11 +22,13 @@ import Section from '../components/Section'
 import { SECTION_ID, routes } from '../constants'
 import ListIconItem from '../components/ListIconItem'
 import IconItem from '../components/IconItem'
+import Map from '../components/Map'
 import ExternalLink from '../components/ExternalLink'
 import TmNavBar from '../tmComponents/TmNavBar'
 import TmiLogo from '../tmComponents/TmiLogo'
 import TmHead from '../tmComponents/TmHead'
-import TmMap from '../tmComponents/TmMap'
+import MeetingItemWrapper from '../tmComponents/MeetingItemWrapper'
+import FacebookEvents from '../tmComponents/FacebookEvents'
 
 const StyledH1 = styled(H1)`
   color: ${theme.colors.WHITE}
@@ -89,19 +91,6 @@ const MeetingsWrapper = styled.div`
 
 const MeetingsDescription = styled(Text.S)`
   text-align: center;
-`
-
-const CalendarPlaceholder = styled.div`
-  width: 100%;
-  height: 400px;
-  background: ${theme.colors.GALLERY};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  ${theme.media.desktop`
-    margin: 0 12px;
-    max-width: 400px;
-  `}
 `
 
 const LandingPage = ({
@@ -220,25 +209,30 @@ const LandingPage = ({
       <Section id={SECTION_ID.MEETINGS} title={frontmatter.menu.meetings} pb="12px">
         <MeetingsDescription>{frontmatter.meetingsSection.description}</MeetingsDescription>
         <MeetingsWrapper>
-          <CalendarPlaceholder>
-            <iframe
-              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftoastmasters.kosice%2F&tabs=events&width=400&height=400&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=405263680205819"
-              title="Eventy"
-              width="400"
-              height="400"
-              style={{ border: 'none', overflow: 'hidden' }}
-              allowTransparency="true"
-              allow="encrypted-media"
-            />
-          </CalendarPlaceholder>
-          <TmMap
-            isMobileView={!isDesktop}
-            {...frontmatter.meetingsSection.primaryMap}
-          />
-          <TmMap
-            isMobileView={!isDesktop}
-            {...frontmatter.meetingsSection.secondaryMap}
-          />
+          <MeetingItemWrapper description={frontmatter.meetingsSection.calendar.description}>
+            {({ width, height }) => (
+              <FacebookEvents
+                width={width}
+                height={height}
+                {...frontmatter.meetingsSection.calendar}
+              />)}
+          </MeetingItemWrapper>
+          <MeetingItemWrapper description={frontmatter.meetingsSection.calendar.description}>
+            {({ width, height }) => (
+              <Map
+                width={width}
+                height={height}
+                {...frontmatter.meetingsSection.primaryMap}
+              />)}
+          </MeetingItemWrapper>
+          <MeetingItemWrapper description={frontmatter.meetingsSection.calendar.description}>
+            {({ width, height }) => (
+              <Map
+                width={width}
+                height={height}
+                {...frontmatter.meetingsSection.secondaryMap}
+              />)}
+          </MeetingItemWrapper>
         </MeetingsWrapper>
       </Section>
       <Section id={SECTION_ID.CONTACT} title={frontmatter.menu.contact} hasDarkBackground>
@@ -339,6 +333,11 @@ export const query = graphql`
             }
             meetingsSection {
               description
+              calendar {
+                src
+                title
+                description
+              }
               primaryMap {
                 src
                 title
