@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import { FaChevronCircleDown } from 'react-icons/fa'
 import theme from '../theme'
+import { scrollToElement } from '../utils'
 
 const Wrapper = styled.div`
   position: relative;
@@ -32,7 +32,7 @@ const StyledImg = styled(Img)`
   height: 100%;
 `
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   color: ${theme.colors.WHITE};
   ${theme.media.desktop`
     position: absolute;
@@ -43,12 +43,12 @@ const StyledLink = styled(Link)`
   `}
 `
 
-const Hero = ({ children, backgroundImage, continueTo }) =>
+const Hero = ({ children, backgroundImage, continueToId }) =>
   <Wrapper>
     <StyledImg fluid={backgroundImage} style={{ position: 'absolute', top: 0 }} />
     <ContentWrapper>
       {children}
-      <StyledLink to={continueTo}>
+      <StyledLink onClick={() => { scrollToElement(continueToId) }}>
         <FaChevronCircleDown size="3.5rem" />
       </StyledLink>
     </ContentWrapper>
@@ -57,7 +57,7 @@ const Hero = ({ children, backgroundImage, continueTo }) =>
 Hero.propTypes = {
   children: PropTypes.node.isRequired,
   backgroundImage: PropTypes.object,
-  continueTo: PropTypes.string.isRequired
+  continueToId: PropTypes.string.isRequired
 }
 
 export default Hero

@@ -3,36 +3,24 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { space } from 'styled-system'
 import { Link } from 'gatsby'
-import theme from '../../theme'
-import { Text } from '../Typography'
+import { scrollToElement } from '../../utils'
 
-const StyledLink = styled(Link)`
-  ${space};
-  ${theme.media.mobile`
-    width: 100%;
-    background: ${theme.colors.WHITE};
-  `};
-`
+const StyledAnchor = styled.a``
 
-const StyledText = styled(Text.M)`
-  ${theme.media.mobile`
-    color: ${theme.colors.BURGUNDY};
-  `};
-  ${theme.media.desktop`
-    color: ${theme.colors.WHITE};
-  `};
-`
-
-const NavLink = ({ children, to, ...props }) =>
-  <StyledLink to={to} {...props}>
-    <StyledText isBold>
+const NavLink = ({ children, toId, toLink, ...rest }) => {
+  const Comp = toId ? StyledAnchor : Link
+  const props = toId ? { onClick() { scrollToElement(toId) } } : { to: toLink }
+  return (
+    <Comp {...props} {...rest}>
       {children}
-    </StyledText>
-  </StyledLink>
+    </Comp>
+  )
+}
 
 NavLink.propTypes = {
-  to: PropTypes.string,
-  children: PropTypes.string,
+  toId: PropTypes.string,
+  toLink: PropTypes.string,
+  children: PropTypes.node,
   ...space.propTypes
 }
 

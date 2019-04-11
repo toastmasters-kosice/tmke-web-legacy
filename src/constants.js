@@ -9,7 +9,7 @@ export const SECTION_ID = {
 }
 
 export const routes = {
-  HOME: `/#${SECTION_ID.HOME}`,
+  HOME: '/',
   EDUCATION: `/#${SECTION_ID.EDUCATION}`,
   ABOUT: `/#${SECTION_ID.ABOUT}`,
   MEETINGS: `/#${SECTION_ID.MEETINGS}`,

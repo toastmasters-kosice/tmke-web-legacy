@@ -19,7 +19,7 @@ import theme, { getIsMobile } from '../theme'
 import { H1, Text } from '../components/Typography'
 import Hero from '../components/Hero'
 import Section from '../components/Section'
-import { SECTION_ID, routes } from '../constants'
+import { SECTION_ID } from '../constants'
 import ListIconItem from '../components/ListIconItem'
 import IconItem from '../components/IconItem'
 import Map from '../components/Map'
@@ -113,11 +113,11 @@ const LandingPage = ({
   return (
     <React.Fragment>
       <TmHead {...frontmatter.head} />
-      <TmNavBar />
+      <TmNavBar isLanding />
       <div id={SECTION_ID.HOME} />
       <Hero
         backgroundImage={file && file.childImageSharp.fluid}
-        continueTo={routes.EDUCATION}
+        continueToId={SECTION_ID.EDUCATION}
       >
         <StyledH1>
           {frontmatter.hero.h1}

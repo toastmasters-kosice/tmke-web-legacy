@@ -1,2 +1,6 @@
+import smoothscroll from 'smoothscroll-polyfill'
 import 'destyle.css'
-import './src/global.css'
+
+export const onInitialClientRender = () => {
+  smoothscroll.polyfill()
+}
