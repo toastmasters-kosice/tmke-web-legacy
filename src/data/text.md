@@ -33,7 +33,7 @@ meetingsSection:
     title: Eventy z facebooku
     description: Dátum a miesto najbližšieho stretnutia nájdeš ľahko na facebooku
   primaryMap:
-    src: 'https://maps.google.com/maps?q=Gorkeho%202%20Kosice&t=&z=13&ie=UTF8&iwloc=&output=embed'
+    src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10527.880599587215!2d21.251698782262253!3d48.72516203493901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ee061c07d38af%3A0x78bade791929fb76!2zR29ya8OpaG8gMTA2OC8yLCAwNDAgMDEgS2_FoWljZQ!5e0!3m2!1ssk!2ssk!4v1554972340858!5m2!1ssk!2ssk'
     title: Tabačka
     description: 'Typické miesto stretnutia je v Tabačke na Gorkého 2. Miestnosť Midbox, prípadne Kino'
   secondaryMap:
