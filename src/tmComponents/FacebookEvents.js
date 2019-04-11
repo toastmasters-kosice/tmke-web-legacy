@@ -6,6 +6,7 @@ import slugify from 'slugify'
 const StyledIframe = styled.iframe`
   border: none;
   overflow: hidden;
+  display: block;
 `
 const FacebookEvents = ({ width, height, title }) =>
   <StyledIframe

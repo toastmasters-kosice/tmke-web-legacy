@@ -218,7 +218,10 @@ const LandingPage = ({
       <Section id={SECTION_ID.MEETINGS} title={frontmatter.menu.meetings} pb="12px">
         <SectionDescription>{frontmatter.meetingsSection.description}</SectionDescription>
         <MeetingsWrapper>
-          <MeetingItemWrapper description={frontmatter.meetingsSection.calendar.description}>
+          <MeetingItemWrapper
+            description={frontmatter.meetingsSection.calendar.description}
+            offlineDescription={frontmatter.meetingsSection.offlineDescription}
+          >
             {({ width, height }) => (
               <FacebookEvents
                 width={width}
@@ -226,7 +229,10 @@ const LandingPage = ({
                 {...frontmatter.meetingsSection.calendar}
               />)}
           </MeetingItemWrapper>
-          <MeetingItemWrapper description={frontmatter.meetingsSection.primaryMap.description}>
+          <MeetingItemWrapper
+            description={frontmatter.meetingsSection.primaryMap.description}
+            offlineDescription={frontmatter.meetingsSection.offlineDescription}
+          >
             {({ width, height }) => (
               <Map
                 width={width}
@@ -234,7 +240,10 @@ const LandingPage = ({
                 {...frontmatter.meetingsSection.primaryMap}
               />)}
           </MeetingItemWrapper>
-          <MeetingItemWrapper description={frontmatter.meetingsSection.secondaryMap.description}>
+          <MeetingItemWrapper
+            description={frontmatter.meetingsSection.secondaryMap.description}
+            offlineDescription={frontmatter.meetingsSection.offlineDescription}
+          >
             {({ width, height }) => (
               <Map
                 width={width}
@@ -343,6 +352,7 @@ export const query = graphql`
             }
             meetingsSection {
               description
+              offlineDescription
               calendar {
                 title
                 description
