@@ -40,7 +40,6 @@ const LinksWrapper = styled.div`
       display: none;  
     `}
   `}
-  
 `
 
 class NavBar extends React.Component {
