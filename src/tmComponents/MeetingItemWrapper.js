@@ -32,7 +32,7 @@ const MeetingItemWrapper = ({ description, children }) => {
       <MobileDescription>
         {`${description}:`}
       </MobileDescription>
-      {children({ width, height: Math.min(BASE_SIZE, width) })}
+      {children({ width, height: Math.max(BASE_SIZE, width) })}
       <DesktopDescription>
         {`${description}.`}
       </DesktopDescription>

@@ -25,10 +25,7 @@ const Map = ({ width, height, title, src }) => (
         width={width}
         id={slugify(title)}
         src={src}
-        frameBorder="0"
-        scrolling="no"
-        marginHeight="0"
-        marginWidth="0"
+        style={{ border: 'none' }}
         allowFullScreen
       />
     </GMapCanvas>

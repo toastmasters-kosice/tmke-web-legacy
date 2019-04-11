@@ -77,16 +77,25 @@ const StyledContactUl = styled.ul`
 `
 const MeetingsWrapper = styled.div`
   padding-top: 12px;
-  display: grid;
-  width: 100%;
-  grid-template-rows: auto auto auto;
-  grid-row-gap: 24px;
   text-align: center;
   ${theme.media.desktop`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+  `};
+  ${theme.media.mobile`
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    justify-content: center;
+    overflow: hidden;
+    & > div {
+      margin-bottom: 24px;
+    }
+    div:last-child {
+      margin-bottom: 0;
+    }
   `};
 `
 
@@ -101,7 +110,6 @@ const LandingPage = ({
   }
 }) => {
   const isDesktop = !getIsMobile()
-
   return (
     <React.Fragment>
       <TmHead {...frontmatter.head} />
