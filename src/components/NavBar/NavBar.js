@@ -25,6 +25,9 @@ const Wrapper = styled.div`
 const LinksWrapper = styled.div`
   ${theme.media.desktop`
     display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   `}
   ${theme.media.mobile`
     position: absolute;
