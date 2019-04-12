@@ -120,3 +120,5 @@ Mame novy web
 
 ### Oznam 2
 Tato stranka bola vybuildena a deploynuta pomocou netlify.
+
+Testing automatic deploy...
