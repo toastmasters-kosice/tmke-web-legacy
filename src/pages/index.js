@@ -369,6 +369,7 @@ export const query = graphql`
               }
             }
             contactSection {
+              email
               label1
               label2
               label3
