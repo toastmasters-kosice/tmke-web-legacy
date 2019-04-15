@@ -41,6 +41,16 @@ const LinksWrapper = styled.div`
     `}
   `}
 `
+const StyledShadow = styled.div`
+  display: ${({ isOpen }) => isOpen ? 'block' : 'none'};
+  ${theme.media.mobile`
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+  `}
+`
 
 class NavBar extends React.Component {
   state = {
@@ -60,17 +70,20 @@ class NavBar extends React.Component {
     const { children, logo } = this.props
     const { isMobileMenuOpen } = this.state
     return (
-      <Wrapper>
-        {logo}
-        <LinksWrapper isOpen={isMobileMenuOpen} onClick={this.handleCloseMenuClick}>
-          {children}
-        </LinksWrapper>
-        <MenuButton
-          p="12px 24px"
-          onOpenMenu={this.handleToggleMenuClicked}
-          isActive={isMobileMenuOpen}
-        />
-      </Wrapper>
+      <React.Fragment>
+        <StyledShadow isOpen={isMobileMenuOpen} onClick={this.handleCloseMenuClick} />
+        <Wrapper>
+          {logo}
+          <LinksWrapper isOpen={isMobileMenuOpen} onClick={this.handleCloseMenuClick}>
+            {children}
+          </LinksWrapper>
+          <MenuButton
+            p="12px 24px"
+            onOpenMenu={this.handleToggleMenuClicked}
+            isActive={isMobileMenuOpen}
+          />
+        </Wrapper>
+      </React.Fragment>
     )
   }
 }
