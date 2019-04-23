@@ -20,15 +20,13 @@ import Section from '../components/Section'
 import { SECTION_ID } from '../constants'
 import ListIconItem from '../components/ListIconItem'
 import IconItem from '../components/IconItem'
-import Map from '../components/Map'
 import ExternalLink from '../components/ExternalLink'
 import withRefreshOnResize from '../components/withRefreshOnResize'
 import TmNavBar from '../tmComponents/TmNavBar'
 import TmiLogo from '../tmComponents/TmiLogo'
 import TmHead from '../tmComponents/TmHead'
-import MeetingItemWrapper from '../tmComponents/MeetingItemWrapper'
-import FacebookEvents from '../tmComponents/FacebookEvents'
 import Contacts from '../tmComponents/Contacts'
+import Meetings from '../tmComponents/Meetings'
 
 const StyledH1 = styled(H1)`
   color: ${theme.colors.WHITE}
@@ -68,30 +66,6 @@ const StyledAboutUl = styled.ul`
     }
   `};
 `
-const MeetingsWrapper = styled.div`
-  padding-top: 12px;
-  text-align: center;
-  ${theme.media.desktop`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  `};
-  ${theme.media.mobile`
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-    justify-content: center;
-    overflow: hidden;
-    & > div {
-      margin-bottom: 24px;
-    }
-    div:last-child {
-      margin-bottom: 0;
-    }
-  `};
-`
-
 const SectionDescription = styled(Text.S)`
   text-align: center;
 `
@@ -209,42 +183,7 @@ const LandingPage = ({
         </StyledAboutUl>
       </Section>
       <Section id={SECTION_ID.MEETINGS} title={frontmatter.menu.meetings} pb="12px">
-        <SectionDescription>{frontmatter.meetingsSection.description}</SectionDescription>
-        <MeetingsWrapper>
-          <MeetingItemWrapper
-            description={frontmatter.meetingsSection.calendar.description}
-            offlineDescription={frontmatter.meetingsSection.offlineDescription}
-          >
-            {({ width, height }) => (
-              <FacebookEvents
-                width={width}
-                height={height}
-                {...frontmatter.meetingsSection.calendar}
-              />)}
-          </MeetingItemWrapper>
-          <MeetingItemWrapper
-            description={frontmatter.meetingsSection.primaryMap.description}
-            offlineDescription={frontmatter.meetingsSection.offlineDescription}
-          >
-            {({ width, height }) => (
-              <Map
-                width={width}
-                height={height}
-                {...frontmatter.meetingsSection.primaryMap}
-              />)}
-          </MeetingItemWrapper>
-          <MeetingItemWrapper
-            description={frontmatter.meetingsSection.secondaryMap.description}
-            offlineDescription={frontmatter.meetingsSection.offlineDescription}
-          >
-            {({ width, height }) => (
-              <Map
-                width={width}
-                height={height}
-                {...frontmatter.meetingsSection.secondaryMap}
-              />)}
-          </MeetingItemWrapper>
-        </MeetingsWrapper>
+        <Meetings />
       </Section>
       <Section id={SECTION_ID.CONTACT} title={frontmatter.menu.contact} hasDarkBackground>
         <Contacts />
@@ -308,24 +247,6 @@ export const query = graphql`
               link
               label2
               label3
-            }
-            meetingsSection {
-              description
-              offlineDescription
-              calendar {
-                title
-                description
-              }
-              primaryMap {
-                src
-                title
-                description
-              }
-              secondaryMap {
-                src
-                title
-                description
-              }
             }
           }
         }

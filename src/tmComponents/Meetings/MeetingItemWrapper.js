@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import theme from '../theme'
-import { getIsMobile, getWindowWidth, getIsOnline } from '../utils'
-import { Text } from '../components/Typography'
+import theme from '../../theme'
+import { getIsMobile, getWindowWidth, getIsOnline } from '../../utils'
+import { Text } from '../../components/Typography'
 
 const BASE_SIZE = 400
 const Wrapper = styled.div`
