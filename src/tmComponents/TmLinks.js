@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { space } from 'styled-system'
 import slugify from 'slugify'
-import { getIsMobile } from '../theme'
+import { getIsMobile } from '../utils'
 import ExternalLink from '../components/ExternalLink'
 import { H3 } from '../components/Typography'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import debounce from 'lodash.debounce'
-import { getWindowWidth } from '../theme'
+import { getWindowWidth } from '../utils'
 
 const withRefreshOnResize = (Comp) => {
   class WithRefresh extends React.Component {

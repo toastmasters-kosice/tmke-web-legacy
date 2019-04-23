@@ -15,7 +15,8 @@ import {
   GiSpiderWeb
 } from 'react-icons/gi'
 import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa'
-import theme, { getIsMobile } from '../theme'
+import theme from '../theme'
+import { getIsMobile } from '../utils'
 import { H1, Text } from '../components/Typography'
 import Hero from '../components/Hero'
 import Section from '../components/Section'

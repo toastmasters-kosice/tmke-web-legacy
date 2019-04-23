@@ -38,14 +38,3 @@ export default {
       }`
   }
 }
-
-const globalWindow = typeof window !== 'undefined' ? window : {}
-const globalDocument = typeof document !== 'undefined' ? document : {
-  documentElement: {},
-  body: {}
-}
-// todo move to utils
-export const getWindowWidth = () => globalDocument.documentElement.clientWidth
-  || globalDocument.body.clientWidth
-  || globalWindow.innerWidth
-export const getIsMobile = () => getWindowWidth() <= MOBILE_THRESHOLD
