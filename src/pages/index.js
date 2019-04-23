@@ -4,17 +4,14 @@ import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import {
   GiAura,
-  GiEnvelope,
   GiFireworkRocket,
   GiGrapes,
   GiHangGlider,
   GiLaurelsTrophy,
   GiPublicSpeaker,
   GiSeedling,
-  GiShakingHands,
   GiSpiderWeb
 } from 'react-icons/gi'
-import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa'
 import theme from '../theme'
 import { getIsMobile } from '../utils'
 import { H1, Text } from '../components/Typography'
@@ -31,6 +28,7 @@ import TmiLogo from '../tmComponents/TmiLogo'
 import TmHead from '../tmComponents/TmHead'
 import MeetingItemWrapper from '../tmComponents/MeetingItemWrapper'
 import FacebookEvents from '../tmComponents/FacebookEvents'
+import Contacts from '../tmComponents/Contacts'
 
 const StyledH1 = styled(H1)`
   color: ${theme.colors.WHITE}
@@ -68,13 +66,6 @@ const StyledAboutUl = styled.ul`
     li: last-child {
       justify-self: flex-start;
     }
-  `};
-`
-const StyledContactUl = styled.ul`
-  ${theme.media.desktop`
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
   `};
 `
 const MeetingsWrapper = styled.div`
@@ -256,50 +247,7 @@ const LandingPage = ({
         </MeetingsWrapper>
       </Section>
       <Section id={SECTION_ID.CONTACT} title={frontmatter.menu.contact} hasDarkBackground>
-        <StyledContactUl>
-          <li>
-            <ListIconItem
-              iconComp={GiShakingHands}
-              text={frontmatter.contactSection.label1}
-            />
-          </li>
-          <li>
-            <ExternalLink to={`mailto:${frontmatter.contactSection.email}`}>
-              <ListIconItem
-                iconComp={GiEnvelope}
-                text={frontmatter.contactSection.label2}
-                isBold
-              />
-            </ExternalLink>
-          </li>
-          <li>
-            <ExternalLink to="https://www.facebook.com/toastmasters.kosice/">
-              <ListIconItem
-                iconComp={FaFacebook}
-                text={frontmatter.contactSection.label3}
-                isBold
-              />
-            </ExternalLink>
-          </li>
-          <li>
-            <ExternalLink to="https://www.instagram.com/p/BekK6pthQ-s/">
-              <ListIconItem
-                iconComp={FaInstagram}
-                text={frontmatter.contactSection.label4}
-                isBold
-              />
-            </ExternalLink>
-          </li>
-          <li>
-            <ExternalLink to="https://www.youtube.com/channel/UCUcc-5LcSzXbgEFkpNsiLXw">
-              <ListIconItem
-                iconComp={FaYoutube}
-                text={frontmatter.contactSection.label5}
-                isBold
-              />
-            </ExternalLink>
-          </li>
-        </StyledContactUl>
+        <Contacts />
       </Section>
     </React.Fragment>
   )
@@ -378,14 +326,6 @@ export const query = graphql`
                 title
                 description
               }
-            }
-            contactSection {
-              email
-              label1
-              label2
-              label3
-              label4
-              label5
             }
           }
         }
