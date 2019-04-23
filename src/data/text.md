@@ -111,10 +111,4 @@ forMembers:
 ---
 
 ## Oznamy
-Toto je sekcia oznamov
-- je plne modifikovatelna
-- teoreticky aj nahraditelna ak inym textom (napr. skusenosti/mentoring/...)
-- je clenitelna a modifikovatelna pomocou [markdownu](https://guides.github.com/features/mastering-markdown/)
-
-### Oznam 1
-Mame novy web 
+Máme nový web :) 
