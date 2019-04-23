@@ -45,8 +45,9 @@ contactSection:
   label1: 'osobne na stretnutiach klubu'
   label2: 'toastmasters.kosice@gmail.com'
   email: 'toastmasters.kosice@gmail.com'
-  label3: 'správou na Facebooku'
-  label4: 'naša stránka na Facebooku'
+  label3: 'stránka na Facebooku'
+  label4: 'fotky na Instagrame'
+  label5: 'videá na YouTube'
 forMembers:
   leadersTitle: Vedenie klubu
   roles: [

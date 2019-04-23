@@ -14,7 +14,7 @@ import {
   GiShakingHands,
   GiSpiderWeb
 } from 'react-icons/gi'
-import { FaFacebook, FaFacebookMessenger } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa'
 import theme, { getIsMobile } from '../theme'
 import { H1, Text } from '../components/Typography'
 import Hero from '../components/Hero'
@@ -73,7 +73,8 @@ const StyledContactUl = styled.ul`
   ${theme.media.desktop`
     display: flex;
     justify-content: center;
-  `}
+    flex-wrap: wrap;
+  `};
 `
 const MeetingsWrapper = styled.div`
   padding-top: 12px;
@@ -102,7 +103,7 @@ const MeetingsWrapper = styled.div`
 const SectionDescription = styled(Text.S)`
   text-align: center;
 `
-
+// todo break into smaller parts
 const LandingPage = ({
   data: {
     file,
@@ -262,31 +263,40 @@ const LandingPage = ({
             />
           </li>
           <li>
-            <a href={`mailto:${frontmatter.contactSection.email}`}>
+            <ExternalLink to={`mailto:${frontmatter.contactSection.email}`}>
               <ListIconItem
                 iconComp={GiEnvelope}
                 text={frontmatter.contactSection.label2}
                 isBold
               />
-            </a>
+            </ExternalLink>
           </li>
           <li>
-            <a href="https://msng.link/fm/toastmasters.kosice">
+            <ExternalLink to="https://www.facebook.com/toastmasters.kosice/">
               <ListIconItem
-                iconComp={FaFacebookMessenger}
+                iconComp={FaFacebook}
                 text={frontmatter.contactSection.label3}
                 isBold
               />
-            </a>
+            </ExternalLink>
           </li>
           <li>
-            <a href="https://www.facebook.com/toastmasters.kosice/">
+            <ExternalLink to="https://www.instagram.com/p/BekK6pthQ-s/">
               <ListIconItem
-                iconComp={FaFacebook}
+                iconComp={FaInstagram}
                 text={frontmatter.contactSection.label4}
                 isBold
               />
-            </a>
+            </ExternalLink>
+          </li>
+          <li>
+            <ExternalLink to="https://www.youtube.com/channel/UCUcc-5LcSzXbgEFkpNsiLXw">
+              <ListIconItem
+                iconComp={FaYoutube}
+                text={frontmatter.contactSection.label5}
+                isBold
+              />
+            </ExternalLink>
           </li>
         </StyledContactUl>
       </Section>
@@ -374,6 +384,7 @@ export const query = graphql`
               label2
               label3
               label4
+              label5
             }
           }
         }
