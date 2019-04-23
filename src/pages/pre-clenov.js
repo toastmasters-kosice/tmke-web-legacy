@@ -48,6 +48,9 @@ const Announcements = styled.div`
   h2 {
     font-size: ${theme.fontSize.H2}px;
     color: ${theme.colors.BURGUNDY};
+    ${theme.media.desktop`
+      padding: 24px 0 12px;
+    `};
   }
   h3 {
     font-size: ${theme.fontSize.H3}px;
