@@ -19,7 +19,7 @@ const DesktopRow = styled.div`
   justify-content: center;
 `
 
-const TmLinks = ({ links }) => getIsMobile()
+const InterestingLinks = ({ links }) => getIsMobile()
   ? (
     <Column>
       {links.map(({ subtitle, list }) => (
@@ -53,7 +53,7 @@ const TmLinks = ({ links }) => getIsMobile()
       ))}
     </DesktopRow>)
 
-TmLinks.propTypes = {
+InterestingLinks.propTypes = {
   links: PropTypes.arrayOf(PropTypes.shape({
     subtitle: PropTypes.string.isRequired,
     list: PropTypes.arrayOf(PropTypes.shape({
@@ -63,4 +63,4 @@ TmLinks.propTypes = {
   }))
 }
 
-export default TmLinks
+export default InterestingLinks

@@ -9,8 +9,8 @@ import Section from '../components/Section'
 import withRefreshOnResize from '../components/withRefreshOnResize'
 import Head from '../tmComponents/Head'
 import Navigation from '../tmComponents/Navigation'
-import TmLeaderRole from '../tmComponents/TmLeaderRole'
-import TmLinks from '../tmComponents/TmLinks'
+import LeaderRole from '../tmComponents/LeaderRole'
+import InterestingLinks from '../tmComponents/InterestingLinks'
 
 const MenuPlaceholder = styled.div`
   height: ${NAVIGATION_HEIGHT}px;
@@ -97,14 +97,14 @@ const ForMembersPage = ({
     <Section title={frontmatter.forMembers.leadersTitle} pb="12px">
       <RolesWrapper count={frontmatter.forMembers.roles.length}>
         {frontmatter.forMembers.roles.map(role => (
-          <TmLeaderRole key={slugify(role)}>
+          <LeaderRole key={slugify(role)}>
             {role}
-          </TmLeaderRole>
+          </LeaderRole>
         ))}
       </RolesWrapper>
     </Section>
     <Section title={frontmatter.forMembers.interestingLinksTitle} hasDarkBackground>
-      <TmLinks links={frontmatter.forMembers.links} />
+      <InterestingLinks links={frontmatter.forMembers.links} />
     </Section>
   </React.Fragment>
 )

@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   align-items: center;
 `
 
-const TmLeaderRole = ({ children }) =>
+const LeaderRole = ({ children }) =>
   <Wrapper>
     <Text.M>
       &#8226;&nbsp;
@@ -19,8 +19,8 @@ const TmLeaderRole = ({ children }) =>
     </Text.M>
   </Wrapper>
 
-TmLeaderRole.propTypes = {
+LeaderRole.propTypes = {
   children: PropTypes.node
 }
 
-export default TmLeaderRole
+export default LeaderRole
