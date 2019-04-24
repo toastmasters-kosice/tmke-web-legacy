@@ -8,7 +8,7 @@ import { NAVIGATION_HEIGHT } from '../constants'
 import Section from '../components/Section'
 import withRefreshOnResize from '../components/withRefreshOnResize'
 import Head from '../tmComponents/Head'
-import TmNavBar from '../tmComponents/TmNavBar'
+import Navigation from '../tmComponents/Navigation'
 import TmLeaderRole from '../tmComponents/TmLeaderRole'
 import TmLinks from '../tmComponents/TmLinks'
 
@@ -90,7 +90,7 @@ const ForMembersPage = ({
   <React.Fragment>
     <Head {...frontmatter.head} />
     <MenuPlaceholder />
-    <TmNavBar />
+    <Navigation />
     <Section hasDarkBackground pb="12px">
       <Announcements dangerouslySetInnerHTML={{ __html: html }} />
     </Section>

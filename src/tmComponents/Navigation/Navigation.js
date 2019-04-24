@@ -4,7 +4,7 @@ import { graphql, StaticQuery } from 'gatsby'
 import { routes, SECTION_ID } from '../../constants'
 import NavBar from '../../components/NavBar'
 import HomeButton from './HomeButton'
-import TmNavLink from './TmNavLink'
+import NavLink from './NavLink'
 
 export const query = graphql`
   query {
@@ -42,36 +42,36 @@ const getLinkProps = isLanding => isLanding
     forMembers: { toLink: routes.FOR_MEMBERS }
   }
 
-const TmNavBar = ({ isLanding }) => (
+const Navigation = ({ isLanding }) => (
   <StaticQuery
     query={query}
     render={(
       { allMarkdownRemark: { edges: [{ node: { frontmatter } }] } }
     ) => (
       <NavBar logo={<HomeButton px="24px" isLanding={isLanding} />}>
-        <TmNavLink {...getLinkProps(isLanding).education}>
+        <NavLink {...getLinkProps(isLanding).education}>
           {frontmatter.menu.education}
-        </TmNavLink>
-        <TmNavLink {...getLinkProps(isLanding).about}>
+        </NavLink>
+        <NavLink {...getLinkProps(isLanding).about}>
           {frontmatter.menu.about}
-        </TmNavLink>
-        <TmNavLink {...getLinkProps(isLanding).meetings}>
+        </NavLink>
+        <NavLink {...getLinkProps(isLanding).meetings}>
           {frontmatter.menu.meetings}
-        </TmNavLink>
-        <TmNavLink {...getLinkProps(isLanding).contact}>
+        </NavLink>
+        <NavLink {...getLinkProps(isLanding).contact}>
           {frontmatter.menu.contact}
-        </TmNavLink>
-        <TmNavLink {...getLinkProps(isLanding).forMembers}>
+        </NavLink>
+        <NavLink {...getLinkProps(isLanding).forMembers}>
           {frontmatter.menu.forMembers}
-        </TmNavLink>
+        </NavLink>
       </NavBar>
     )}
   />
 )
 
-TmNavBar.propTypes = {
+Navigation.propTypes = {
   isLanding: PropTypes.bool
 }
 
-export default TmNavBar
+export default Navigation
 

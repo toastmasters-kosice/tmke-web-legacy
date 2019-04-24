@@ -22,15 +22,15 @@ const StyledText = styled(Text.M)`
   `};
  `
 
-const TmNavLink = ({ children, ...props }) =>
+const NavLink = ({ children, ...props }) =>
   <StyledLink {...props}>
     <StyledText isBold>
       {children}
     </StyledText>
   </StyledLink>
 
-TmNavLink.propTypes = {
+NavLink.propTypes = {
   children: PropTypes.string.isRequired
 }
 
-export default TmNavLink
+export default NavLink

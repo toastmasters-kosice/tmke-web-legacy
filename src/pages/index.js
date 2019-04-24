@@ -9,7 +9,7 @@ import Hero from '../components/Hero'
 import Section from '../components/Section'
 import { SECTION_ID } from '../constants'
 import withRefreshOnResize from '../components/withRefreshOnResize'
-import TmNavBar from '../tmComponents/TmNavBar'
+import Navigation from '../tmComponents/Navigation'
 import Head from '../tmComponents/Head'
 import Contacts from '../tmComponents/Contacts'
 import Meetings from '../tmComponents/Meetings'
@@ -29,7 +29,7 @@ const LandingPage = ({
   return (
     <React.Fragment>
       <Head {...frontmatter.head} />
-      <TmNavBar isLanding />
+      <Navigation isLanding />
       <div id={SECTION_ID.HOME} />
       <Hero
         backgroundImage={file && file.childImageSharp.fluid}
