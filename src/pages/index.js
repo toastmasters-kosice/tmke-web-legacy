@@ -3,14 +3,8 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import {
-  GiAura,
-  GiFireworkRocket,
   GiGrapes,
-  GiHangGlider,
-  GiLaurelsTrophy,
-  GiPublicSpeaker,
-  GiSeedling,
-  GiSpiderWeb
+  GiSeedling
 } from 'react-icons/gi'
 import theme from '../theme'
 import { getIsMobile } from '../utils'
@@ -18,7 +12,6 @@ import { H1, Text } from '../components/Typography'
 import Hero from '../components/Hero'
 import Section from '../components/Section'
 import { SECTION_ID } from '../constants'
-import ListIconItem from '../components/ListIconItem'
 import IconItem from '../components/IconItem'
 import ExternalLink from '../components/ExternalLink'
 import withRefreshOnResize from '../components/withRefreshOnResize'
@@ -27,31 +20,12 @@ import TmiLogo from '../tmComponents/TmiLogo'
 import TmHead from '../tmComponents/TmHead'
 import Contacts from '../tmComponents/Contacts'
 import Meetings from '../tmComponents/Meetings'
+import Education from '../tmComponents/Education'
 
 const StyledH1 = styled(H1)`
   color: ${theme.colors.WHITE}
 `
 
-const SectionWrapper = styled.div`
-  display: inline-block;
-  width: 80%;
-`
-
-const StyledEduUl = styled.ul`
-  ${theme.media.desktop`
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-column-gap: 24px;
-    li:nth-child(2n+1) {
-      justify-self: flex-end;
-      text-align: right;
-    }
-    li:nth-child(2n) {
-      text-align: left;
-    }
-    padding: 24px 0;
-  `};
-`
 const StyledAboutUl = styled.ul`
   ${theme.media.desktop`
     display: grid;
@@ -65,9 +39,6 @@ const StyledAboutUl = styled.ul`
       justify-self: flex-start;
     }
   `};
-`
-const SectionDescription = styled(Text.S)`
-  text-align: center;
 `
 // todo break into smaller parts
 const LandingPage = ({
@@ -91,58 +62,7 @@ const LandingPage = ({
         </StyledH1>
       </Hero>
       <Section id={SECTION_ID.EDUCATION} title={frontmatter.menu.education} pb="24px">
-        {isDesktop && (
-          <SectionWrapper>
-            <SectionDescription>{frontmatter.educationSection.description}</SectionDescription>
-          </SectionWrapper>)
-        }
-        <StyledEduUl>
-          <li>
-            <ListIconItem
-              iconComp={GiPublicSpeaker}
-              text={frontmatter.educationSection.label1}
-              isBig={isDesktop}
-            />
-          </li>
-          <li>
-            <ListIconItem
-              iconComp={GiAura}
-              text={frontmatter.educationSection.label2}
-              isBig={isDesktop}
-            />
-          </li>
-          <li>
-            <ListIconItem
-              iconComp={GiLaurelsTrophy}
-              text={frontmatter.educationSection.label3}
-              isBig={isDesktop}
-            />
-          </li>
-          <li>
-            <ListIconItem
-              iconComp={GiSpiderWeb}
-              text={frontmatter.educationSection.label4}
-              isBig={isDesktop}
-            />
-          </li>
-          <li>
-            <ListIconItem
-              iconComp={GiFireworkRocket}
-              text={frontmatter.educationSection.label5}
-              isBig={isDesktop}
-            />
-          </li>
-          <li>
-            <ListIconItem
-              iconComp={GiHangGlider}
-              text={frontmatter.educationSection.label6}
-              isBig={isDesktop}
-            />
-          </li>
-        </StyledEduUl>
-        <SectionDescription>
-          {frontmatter.educationSection.final}
-        </SectionDescription>
+        <Education isDesktop={isDesktop} />
       </Section>
       <Section id={SECTION_ID.ABOUT} title={frontmatter.menu.about} hasDarkBackground>
         <StyledAboutUl>
@@ -231,16 +151,6 @@ export const query = graphql`
               about
               meetings
               contact
-            }
-            educationSection {
-              description
-              label1
-              label2
-              label3
-              label4
-              label5
-              label6
-              final
             }
             aboutSection {
               label1part1
