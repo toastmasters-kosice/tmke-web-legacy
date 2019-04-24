@@ -10,7 +10,7 @@ import Section from '../components/Section'
 import { SECTION_ID } from '../constants'
 import withRefreshOnResize from '../components/withRefreshOnResize'
 import TmNavBar from '../tmComponents/TmNavBar'
-import TmHead from '../tmComponents/TmHead'
+import Head from '../tmComponents/Head'
 import Contacts from '../tmComponents/Contacts'
 import Meetings from '../tmComponents/Meetings'
 import Education from '../tmComponents/Education'
@@ -28,7 +28,7 @@ const LandingPage = ({
   const isDesktop = !getIsMobile()
   return (
     <React.Fragment>
-      <TmHead {...frontmatter.head} />
+      <Head {...frontmatter.head} />
       <TmNavBar isLanding />
       <div id={SECTION_ID.HOME} />
       <Hero
