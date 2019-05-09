@@ -8,10 +8,11 @@ import theme from '../../theme'
 const MenuAnchor = styled.a`
   background: ${({ isActive }) => isActive ? theme.colors.WHITE : theme.colors.BURGUNDY};
   color: ${({ isActive }) => isActive ? theme.colors.BURGUNDY : theme.colors.WHITE};
-  ${space}
+  cursor: pointer;
+  ${space};
   ${theme.media.desktop`
     display: none;
-  `}
+  `};
 `
 
 const MenuButton = ({ onOpenMenu, isActive, ...props }) => (

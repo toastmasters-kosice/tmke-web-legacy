@@ -5,7 +5,9 @@ import { space } from 'styled-system'
 import { Link } from 'gatsby'
 import { scrollToElement } from '../../utils'
 
-const StyledAnchor = styled.a``
+const StyledAnchor = styled.a`
+  cursor: pointer;
+`
 
 const NavLink = ({ children, toId, toLink, ...rest }) => {
   const Comp = toId ? StyledAnchor : Link

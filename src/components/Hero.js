@@ -34,6 +34,7 @@ const StyledImg = styled(Img)`
 
 const StyledLink = styled.a`
   color: ${theme.colors.WHITE};
+  cursor: pointer;
   ${theme.media.desktop`
     position: absolute;
     bottom: 30px;
