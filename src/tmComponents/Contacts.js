@@ -47,6 +47,7 @@ const Contacts = () =>
           <ListIconItem
             iconComp={GiShakingHands}
             text={frontmatter.contactSection.label1}
+            isBold
           />
         </li>
         <li>
