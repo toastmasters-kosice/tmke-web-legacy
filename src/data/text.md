@@ -111,4 +111,18 @@ forMembers:
 ---
 
 ## Oznamy
-Máme nový web :) 
+
+### 27.5.2019 Voľby do vedenia klubu
+Na dnešnom stretnutí prebehli voľby nových vedúcich klubu, ktorí si začnú plniť povinnosti od 1.7.2019.
+
+**Nové vedenie:**
+- *Prezidentka klubu:* Jana Kolesárová
+- *Tajomník:* Vladimír Záhradník
+- *Viceprezidentka pre členstvo:* Kornélia Hudáková
+- *Viceprezident pre vzdelávanie:* Vladimír Záhradník
+- *Viceprezident pre vzťahy s verejnosťou:* neobsadené
+- *Pokladníčka:* Kamila Pekarovičová
+- *Technický vedúci:* neobsadené
+
+### 20.5.2019 Nová webstránka klubu
+Vlado Záhradník v spolupráci s Lukášom Bičušom pracujú na novom webe. Stará webstránka ako aj doména budú vypnuté v najbližších týždňoch.
