@@ -35,6 +35,8 @@ const StyledImg = styled(Img)`
 const StyledLink = styled.a`
   color: ${theme.colors.WHITE};
   cursor: pointer;
+  height: 3.5rem;
+  width: 3.5rem;
   ${theme.media.desktop`
     position: absolute;
     bottom: 30px;
@@ -50,7 +52,7 @@ const Hero = ({ children, backgroundImage, continueToId }) =>
     <ContentWrapper>
       {children}
       <StyledLink onClick={() => { scrollToElement(continueToId) }}>
-        <FaChevronCircleDown size="3.5rem" />
+        <FaChevronCircleDown size="100%" />
       </StyledLink>
     </ContentWrapper>
   </Wrapper>
