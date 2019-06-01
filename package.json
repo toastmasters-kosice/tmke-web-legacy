@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "toastmasters-ke-webpage",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Toastmastes Košice webpage built with Gatsby",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
