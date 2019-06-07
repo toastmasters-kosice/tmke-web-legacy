@@ -5,6 +5,11 @@ dist: xenial
 sudo: false
 git:
   depth: false
+branches:
+  only:
+    - develop
+script:
+  - npm run build
 deploy:
   provider: pages
   skip-cleanup: true
@@ -15,4 +20,4 @@ deploy:
   target-branch: master
   verbose: true
   on:
-  branch: master
+    branch: develop
