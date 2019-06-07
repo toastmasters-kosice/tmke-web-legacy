@@ -1,6 +1,7 @@
+# Toastmasters Košice [![alt_text][fb_icon]][fb_page]
+[![Build Status](https://api.travis-ci.com/toastmasters-kosice/toastmasters-kosice.github.io.svg?branch=develop)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)][cc-by-nc-sa]
 
-# Toastmasters Košice [![alt_text][fb_icon]][fb_page]
 Webová stránka klubu [Toastmasters Košice][tm-kosice-website].
 
 ## Licencia
