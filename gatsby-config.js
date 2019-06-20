@@ -1,6 +1,10 @@
 const path = require('path')
 
 module.exports = {
+  siteMetadata: {
+    title: 'Toastmasters Košice',
+    siteUrl: 'https://toastmasterskosice.sk',
+  },
   plugins: [{
     resolve: 'gatsby-source-filesystem',
     options: {
@@ -40,6 +44,7 @@ module.exports = {
   'gatsby-transformer-sharp',
   'gatsby-plugin-sharp',
   'gatsby-plugin-react-helmet',
-  'gatsby-plugin-offline'
+  'gatsby-plugin-offline',
+  'gatsby-plugin-sitemap'
   ]
 }
