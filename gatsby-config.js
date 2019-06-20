@@ -14,6 +14,16 @@ module.exports = {
       path: path.join(__dirname, 'src', 'data')
     }
   }, {
+    resolve: 'gatsby-plugin-gtag',
+    options: {
+      // your google analytics tracking id
+      trackingId: `UA-142522378-1`,
+      // Puts tracking script in the head instead of the body
+      head: false,
+      // enable ip anonymization
+      anonymize: true,
+    }
+  }, {
     resolve: 'gatsby-plugin-manifest',
     options: {
       name: 'Toastmasters Košice',

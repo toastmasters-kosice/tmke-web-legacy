@@ -1,6 +1,6 @@
 ---
 head:
-  title: 'TM Košice'
+  title: 'Toastmasters Košice'
   description: 'Toastmasters Košice je rečnícky a líderský klub. Jeho cieľom je vytvarať pozitívne a bezpečné podporné prostredie pre rozvoj týchto zručností.'
   keywords: 'Toastmasters, Košice, vzdelávanie, rečníctvo, líderstvo'
   websiteUrl: 'https://toastmasterskosice.sk/'
