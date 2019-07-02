@@ -1,6 +1,10 @@
 const path = require('path')
 
 module.exports = {
+  siteMetadata: {
+    title: 'Toastmasters Košice',
+    siteUrl: 'https://toastmasterskosice.sk',
+  },
   plugins: [{
     resolve: 'gatsby-source-filesystem',
     options: {
@@ -12,6 +16,16 @@ module.exports = {
     options: {
       name: 'data',
       path: path.join(__dirname, 'src', 'data')
+    }
+  }, {
+    resolve: 'gatsby-plugin-gtag',
+    options: {
+      // your google analytics tracking id
+      trackingId: `UA-142522378-1`,
+      // Puts tracking script in the head instead of the body
+      head: false,
+      // enable ip anonymization
+      anonymize: true,
     }
   }, {
     resolve: 'gatsby-plugin-manifest',
@@ -30,6 +44,7 @@ module.exports = {
   'gatsby-transformer-sharp',
   'gatsby-plugin-sharp',
   'gatsby-plugin-react-helmet',
-  'gatsby-plugin-offline'
+  'gatsby-plugin-offline',
+  'gatsby-plugin-sitemap'
   ]
 }

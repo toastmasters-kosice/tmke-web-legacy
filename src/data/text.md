@@ -1,6 +1,6 @@
 ---
 head:
-  title: 'TM Košice'
+  title: 'Toastmasters Košice'
   description: 'Toastmasters Košice je rečnícky a líderský klub. Jeho cieľom je vytvarať pozitívne a bezpečné podporné prostredie pre rozvoj týchto zručností.'
   keywords: 'Toastmasters, Košice, vzdelávanie, rečníctvo, líderstvo'
   websiteUrl: 'https://toastmasterskosice.sk/'
@@ -43,8 +43,8 @@ meetingsSection:
     description: 'Pár pekných večerov počas leta okupujeme Mestský park'
 contactSection: 
   label1: 'osobne na stretnutiach klubu'
-  label2: 'toastmasters.kosice@gmail.com'
-  email: 'toastmasters.kosice@gmail.com'
+  label2: 'klub@toastmasterskosice.sk'
+  email: 'klub@toastmasterskosice.sk'
   label3: 'Facebook'
   label4: 'Instagram'
   label5: 'YouTube'
@@ -111,6 +111,9 @@ forMembers:
 ---
 
 ## Oznamy
+
+### 2.6.2019 Webstránka oficiálne spustená
+Nová webstránka klubu je oficiálne spustená na adrese [toastmasterskosice.sk](https://toastmasterskosice.sk/). Pôvodná stránka ako aj doména boli deaktivované. Veríme, že sa vám stránka páči a uvítame pripomienky na klub@toastmasterskosice.sk.
 
 ### 27.5.2019 Voľby do vedenia klubu
 Na dnešnom stretnutí prebehli voľby nových vedúcich klubu, ktorí si začnú plniť povinnosti od 1.7.2019.
