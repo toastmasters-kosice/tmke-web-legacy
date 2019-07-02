@@ -51,13 +51,13 @@ contactSection:
 forMembers:
   leadersTitle: Vedenie klubu
   roles: [
-    "Prezident - Jozef Starúch", 
-    "Viceprezident pre vzdelávanie - Jana Kolesárová", 
+    "Prezident - Jana Kolesárová", 
+    "Viceprezident pre vzdelávanie - Vladimír Záhradník", 
     "Tajomník - Vladimír Záhradník", 
-    "Viceprezident pre vzťahy s verejnosťou - Ján Šándor", 
-    "Viceprezident pre členstvo - Jozef Takáč", 
-    "Pokladník - Jozef Starúch", 
-    "Technický vedúci - Lukáš Bičuš" 
+    "Viceprezident pre vzťahy s verejnosťou - voľná pozícia", 
+    "Viceprezident pre členstvo - Kornélia Hudáková", 
+    "Pokladník - Kamila Pekarovičová", 
+    "Technický vedúci - Jozef Starúch" 
   ]
   interestingLinksTitle: Zaujímavé odkazy
   announcementsTitle: Oznamy
