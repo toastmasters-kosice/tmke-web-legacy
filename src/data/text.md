@@ -56,7 +56,7 @@ forMembers:
     "Tajomník - Vladimír Záhradník", 
     "Viceprezident pre vzťahy s verejnosťou - Lucia Pethöova", 
     "Viceprezident pre členstvo - Kornélia Hudáková", 
-    "Pokladník - Kamila Pekarovičová", 
+    "Pokladník - Kamila Pekárovičová", 
     "Technický vedúci - Jozef Starúch" 
   ]
   interestingLinksTitle: Zaujímavé odkazy
