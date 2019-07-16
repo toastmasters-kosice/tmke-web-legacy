@@ -54,7 +54,7 @@ forMembers:
     "Prezident - Jana Kolesárová", 
     "Viceprezident pre vzdelávanie - Vladimír Záhradník", 
     "Tajomník - Vladimír Záhradník", 
-    "Viceprezident pre vzťahy s verejnosťou - voľná pozícia", 
+    "Viceprezident pre vzťahy s verejnosťou - Lucia Pethöova", 
     "Viceprezident pre členstvo - Kornélia Hudáková", 
     "Pokladník - Kamila Pekarovičová", 
     "Technický vedúci - Jozef Starúch" 
@@ -112,20 +112,5 @@ forMembers:
 
 ## Oznamy
 
-### 2.6.2019 Webstránka oficiálne spustená
-Nová webstránka klubu je oficiálne spustená na adrese [toastmasterskosice.sk](https://toastmasterskosice.sk/). Pôvodná stránka ako aj doména boli deaktivované. Veríme, že sa vám stránka páči a uvítame pripomienky na klub@toastmasterskosice.sk.
-
-### 27.5.2019 Voľby do vedenia klubu
-Na dnešnom stretnutí prebehli voľby nových vedúcich klubu, ktorí si začnú plniť povinnosti od 1.7.2019.
-
-**Nové vedenie:**
-- *Prezidentka klubu:* Jana Kolesárová
-- *Tajomník:* Vladimír Záhradník
-- *Viceprezidentka pre členstvo:* Kornélia Hudáková
-- *Viceprezident pre vzdelávanie:* Vladimír Záhradník
-- *Viceprezident pre vzťahy s verejnosťou:* neobsadené
-- *Pokladníčka:* Kamila Pekarovičová
-- *Technický vedúci:* neobsadené
-
-### 20.5.2019 Nová webstránka klubu
-Vlado Záhradník v spolupráci s Lukášom Bičušom pracujú na novom webe. Stará webstránka ako aj doména budú vypnuté v najbližších týždňoch.
+### 1.7.2019 Nové vedenie klubu
+Od dnešného dňa začínajú náš klub viesť noví vedúci. Ich mená nájdete na tejto stránke.
