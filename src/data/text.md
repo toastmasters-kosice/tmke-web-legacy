@@ -54,7 +54,7 @@ forMembers:
     "Prezident - Jana Kolesárová", 
     "Viceprezident pre vzdelávanie - Vladimír Záhradník", 
     "Tajomník - Vladimír Záhradník", 
-    "Viceprezident pre vzťahy s verejnosťou - Lucia Pethöova", 
+    "Viceprezident pre vzťahy s verejnosťou - Lucia Pethöová", 
     "Viceprezident pre členstvo - Kornélia Hudáková", 
     "Pokladník - Kamila Pekárovičová", 
     "Technický vedúci - Jozef Starúch" 
